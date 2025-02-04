@@ -1,0 +1,1122 @@
+VERSION 5.7 ;
+   NAMESCASESENSITIVE ON ;
+   DIVIDERCHAR "/" ;
+   BUSBITCHARS "()" ;
+   DESIGN user_project_wrapper ;
+   TECHNOLOGY sky130A ;
+   UNITS DISTANCE MICRONS 1000 ;
+   DIEAREA ( 0 0 ) ( 2720000 2300000 ) ;
+
+VIAS 0 ;
+END VIAS
+
+COMPONENTS 0 ;
+END COMPONENTS
+
+PINS 370 ;
+   - gpio3_in[0] + NET gpio3_in[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2657190 2299000 ) N ;
+   - gpio3_in[1] + NET gpio3_in[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2629590 2299000 ) N ;
+   - gpio3_in[2] + NET gpio3_in[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2601990 2299000 ) N ;
+   - gpio3_in[3] + NET gpio3_in[3]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2574390 2299000 ) N ;
+   - gpio3_in[4] + NET gpio3_in[4]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2546790 2299000 ) N ;
+   - gpio3_in[5] + NET gpio3_in[5]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2519190 2299000 ) N ;
+   - gpio3_in[6] + NET gpio3_in[6]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2491590 2299000 ) N ;
+   - gpio3_in[7] + NET gpio3_in[7]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2463990 2299000 ) N ;
+   - gpio3_oeb[0] + NET gpio3_oeb[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2638790 2299000 ) N ;
+   - gpio3_oeb[1] + NET gpio3_oeb[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2611190 2299000 ) N ;
+   - gpio3_oeb[2] + NET gpio3_oeb[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2583590 2299000 ) N ;
+   - gpio3_oeb[3] + NET gpio3_oeb[3]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2555990 2299000 ) N ;
+   - gpio3_oeb[4] + NET gpio3_oeb[4]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2528390 2299000 ) N ;
+   - gpio3_oeb[5] + NET gpio3_oeb[5]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2500790 2299000 ) N ;
+   - gpio3_oeb[6] + NET gpio3_oeb[6]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2473190 2299000 ) N ;
+   - gpio3_oeb[7] + NET gpio3_oeb[7]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2445590 2299000 ) N ;
+   - gpio3_out[0] + NET gpio3_out[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2647990 2299000 ) N ;
+   - gpio3_out[1] + NET gpio3_out[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2620390 2299000 ) N ;
+   - gpio3_out[2] + NET gpio3_out[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2592790 2299000 ) N ;
+   - gpio3_out[3] + NET gpio3_out[3]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2565190 2299000 ) N ;
+   - gpio3_out[4] + NET gpio3_out[4]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2537590 2299000 ) N ;
+   - gpio3_out[5] + NET gpio3_out[5]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2509990 2299000 ) N ;
+   - gpio3_out[6] + NET gpio3_out[6]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2482390 2299000 ) N ;
+   - gpio3_out[7] + NET gpio3_out[7]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2454790 2299000 ) N ;
+   - gpio4_in[0] + NET gpio4_in[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 274390 2299000 ) N ;
+   - gpio4_in[1] + NET gpio4_in[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 246790 2299000 ) N ;
+   - gpio4_in[2] + NET gpio4_in[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 219190 2299000 ) N ;
+   - gpio4_in[3] + NET gpio4_in[3]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 191590 2299000 ) N ;
+   - gpio4_in[4] + NET gpio4_in[4]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 163990 2299000 ) N ;
+   - gpio4_in[5] + NET gpio4_in[5]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 136390 2299000 ) N ;
+   - gpio4_in[6] + NET gpio4_in[6]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 108790 2299000 ) N ;
+   - gpio4_in[7] + NET gpio4_in[7]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 81190 2299000 ) N ;
+   - gpio4_oeb[0] + NET gpio4_oeb[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 255990 2299000 ) N ;
+   - gpio4_oeb[1] + NET gpio4_oeb[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 228390 2299000 ) N ;
+   - gpio4_oeb[2] + NET gpio4_oeb[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 200790 2299000 ) N ;
+   - gpio4_oeb[3] + NET gpio4_oeb[3]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 173190 2299000 ) N ;
+   - gpio4_oeb[4] + NET gpio4_oeb[4]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 145590 2299000 ) N ;
+   - gpio4_oeb[5] + NET gpio4_oeb[5]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 117990 2299000 ) N ;
+   - gpio4_oeb[6] + NET gpio4_oeb[6]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 90390 2299000 ) N ;
+   - gpio4_oeb[7] + NET gpio4_oeb[7]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 62790 2299000 ) N ;
+   - gpio4_out[0] + NET gpio4_out[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 265190 2299000 ) N ;
+   - gpio4_out[1] + NET gpio4_out[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 237590 2299000 ) N ;
+   - gpio4_out[2] + NET gpio4_out[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 209990 2299000 ) N ;
+   - gpio4_out[3] + NET gpio4_out[3]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 182390 2299000 ) N ;
+   - gpio4_out[4] + NET gpio4_out[4]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 154790 2299000 ) N ;
+   - gpio4_out[5] + NET gpio4_out[5]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 127190 2299000 ) N ;
+   - gpio4_out[6] + NET gpio4_out[6]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 99590 2299000 ) N ;
+   - gpio4_out[7] + NET gpio4_out[7]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 71990 2299000 ) N ;
+   - HWDATA[8] + NET HWDATA[8]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 571050 1000 ) N ;
+   - HWDATA[9] + NET HWDATA[9]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 578870 1000 ) N ;
+   - HADDR[0] + NET HADDR[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 258250 1000 ) N ;
+   - HADDR[10] + NET HADDR[10]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 336450 1000 ) N ;
+   - HADDR[11] + NET HADDR[11]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 344270 1000 ) N ;
+   - HADDR[12] + NET HADDR[12]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 352090 1000 ) N ;
+   - HADDR[13] + NET HADDR[13]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 359910 1000 ) N ;
+   - HADDR[14] + NET HADDR[14]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 367730 1000 ) N ;
+   - HADDR[15] + NET HADDR[15]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 375550 1000 ) N ;
+   - HADDR[16] + NET HADDR[16]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 383370 1000 ) N ;
+   - HADDR[17] + NET HADDR[17]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 391190 1000 ) N ;
+   - HADDR[18] + NET HADDR[18]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 399010 1000 ) N ;
+   - HADDR[19] + NET HADDR[19]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 406830 1000 ) N ;
+   - HADDR[1] + NET HADDR[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 266070 1000 ) N ;
+   - HADDR[20] + NET HADDR[20]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 414650 1000 ) N ;
+   - HADDR[21] + NET HADDR[21]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 422470 1000 ) N ;
+   - HADDR[22] + NET HADDR[22]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 430290 1000 ) N ;
+   - HADDR[23] + NET HADDR[23]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 438110 1000 ) N ;
+   - HADDR[24] + NET HADDR[24]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 445930 1000 ) N ;
+   - HADDR[25] + NET HADDR[25]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 453750 1000 ) N ;
+   - HADDR[26] + NET HADDR[26]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 461570 1000 ) N ;
+   - HADDR[27] + NET HADDR[27]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 469390 1000 ) N ;
+   - HADDR[28] + NET HADDR[28]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 477210 1000 ) N ;
+   - HADDR[29] + NET HADDR[29]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 485030 1000 ) N ;
+   - HADDR[2] + NET HADDR[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 273890 1000 ) N ;
+   - HADDR[30] + NET HADDR[30]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 492850 1000 ) N ;
+   - HADDR[31] + NET HADDR[31]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 500670 1000 ) N ;
+   - HADDR[3] + NET HADDR[3]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 281710 1000 ) N ;
+   - HADDR[4] + NET HADDR[4]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 289530 1000 ) N ;
+   - HADDR[5] + NET HADDR[5]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 297350 1000 ) N ;
+   - HADDR[6] + NET HADDR[6]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 305170 1000 ) N ;
+   - HADDR[7] + NET HADDR[7]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 312990 1000 ) N ;
+   - HADDR[8] + NET HADDR[8]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 320810 1000 ) N ;
+   - HADDR[9] + NET HADDR[9]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 328630 1000 ) N ;
+   - HCLK + NET HCLK
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 234790 1000 ) N ;
+   - HRESETn + NET HRESETn
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 242610 1000 ) N ;
+   - HSEL + NET HSEL
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 250430 1000 ) N ;
+   - HWDATA[0] + NET HWDATA[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 508490 1000 ) N ;
+   - HWDATA[10] + NET HWDATA[10]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 586690 1000 ) N ;
+   - HWDATA[11] + NET HWDATA[11]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 594510 1000 ) N ;
+   - HWDATA[12] + NET HWDATA[12]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 602330 1000 ) N ;
+   - HWDATA[13] + NET HWDATA[13]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 610150 1000 ) N ;
+   - HWDATA[14] + NET HWDATA[14]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 617970 1000 ) N ;
+   - HWDATA[15] + NET HWDATA[15]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 625790 1000 ) N ;
+   - HWDATA[16] + NET HWDATA[16]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 633610 1000 ) N ;
+   - HWDATA[17] + NET HWDATA[17]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 641430 1000 ) N ;
+   - HWDATA[18] + NET HWDATA[18]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 649250 1000 ) N ;
+   - HWDATA[19] + NET HWDATA[19]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 657070 1000 ) N ;
+   - HWDATA[1] + NET HWDATA[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 516310 1000 ) N ;
+   - HWDATA[20] + NET HWDATA[20]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 664890 1000 ) N ;
+   - HWDATA[21] + NET HWDATA[21]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 672710 1000 ) N ;
+   - HWDATA[22] + NET HWDATA[22]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 680530 1000 ) N ;
+   - HWDATA[23] + NET HWDATA[23]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 688350 1000 ) N ;
+   - HWDATA[24] + NET HWDATA[24]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 696170 1000 ) N ;
+   - HWDATA[25] + NET HWDATA[25]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 703990 1000 ) N ;
+   - HWDATA[2] + NET HWDATA[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 524130 1000 ) N ;
+   - HWDATA[3] + NET HWDATA[3]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 531950 1000 ) N ;
+   - HWDATA[4] + NET HWDATA[4]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 539770 1000 ) N ;
+   - HWDATA[5] + NET HWDATA[5]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 547590 1000 ) N ;
+   - HWDATA[6] + NET HWDATA[6]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 555410 1000 ) N ;
+   - HWDATA[7] + NET HWDATA[7]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 563230 1000 ) N ;
+   - user_irq[13] + NET user_irq[13]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1173190 1000 ) N ;
+   - user_irq[14] + NET user_irq[14]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1181010 1000 ) N ;
+   - user_irq[15] + NET user_irq[15]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1188830 1000 ) N ;
+   - user_irq[1] + NET user_irq[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1079350 1000 ) N ;
+   - user_irq[2] + NET user_irq[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1087170 1000 ) N ;
+   - user_irq[3] + NET user_irq[3]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1094990 1000 ) N ;
+   - user_irq[4] + NET user_irq[4]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1102810 1000 ) N ;
+   - user_irq[5] + NET user_irq[5]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1110630 1000 ) N ;
+   - user_irq[6] + NET user_irq[6]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1118450 1000 ) N ;
+   - user_irq[7] + NET user_irq[7]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1126270 1000 ) N ;
+   - user_irq[8] + NET user_irq[8]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1134090 1000 ) N ;
+   - user_irq[9] + NET user_irq[9]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1141910 1000 ) N ;
+   - HRDATA[25] + NET HRDATA[25]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1008970 1000 ) N ;
+   - HRDATA[26] + NET HRDATA[26]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1016790 1000 ) N ;
+   - HWRITE + NET HWRITE
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 766550 1000 ) N ;
+   - HRDATA[27] + NET HRDATA[27]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1024610 1000 ) N ;
+   - HRDATA[28] + NET HRDATA[28]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1032430 1000 ) N ;
+   - HRDATA[29] + NET HRDATA[29]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1040250 1000 ) N ;
+   - HRDATA[11] + NET HRDATA[11]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 899490 1000 ) N ;
+   - HRDATA[30] + NET HRDATA[30]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1048070 1000 ) N ;
+   - HRDATA[31] + NET HRDATA[31]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1055890 1000 ) N ;
+   - HRDATA[5] + NET HRDATA[5]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 852570 1000 ) N ;
+   - HRDATA[6] + NET HRDATA[6]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 860390 1000 ) N ;
+   - HRDATA[7] + NET HRDATA[7]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 868210 1000 ) N ;
+   - HRDATA[0] + NET HRDATA[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 813470 1000 ) N ;
+   - HRDATA[1] + NET HRDATA[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 821290 1000 ) N ;
+   - HREADY + NET HREADY
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 758730 1000 ) N ;
+   - HRDATA[2] + NET HRDATA[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 829110 1000 ) N ;
+   - HRDATA[3] + NET HRDATA[3]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 836930 1000 ) N ;
+   - HSIZE[0] + NET HSIZE[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 790010 1000 ) N ;
+   - HTRANS[0] + NET HTRANS[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 774370 1000 ) N ;
+   - HTRANS[1] + NET HTRANS[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 782190 1000 ) N ;
+   - HSIZE[1] + NET HSIZE[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 797830 1000 ) N ;
+   - HSIZE[2] + NET HSIZE[2]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 805650 1000 ) N ;
+   - HRDATA[4] + NET HRDATA[4]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 844750 1000 ) N ;
+   - HRDATA[12] + NET HRDATA[12]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 907310 1000 ) N ;
+   - HRDATA[13] + NET HRDATA[13]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 915130 1000 ) N ;
+   - HRDATA[14] + NET HRDATA[14]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 922950 1000 ) N ;
+   - HRDATA[15] + NET HRDATA[15]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 930770 1000 ) N ;
+   - HRDATA[16] + NET HRDATA[16]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 938590 1000 ) N ;
+   - HRDATA[8] + NET HRDATA[8]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 876030 1000 ) N ;
+   - HRDATA[9] + NET HRDATA[9]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 883850 1000 ) N ;
+   - HRDATA[17] + NET HRDATA[17]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 946410 1000 ) N ;
+   - HREADYOUT + NET HREADYOUT
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1063710 1000 ) N ;
+   - HRDATA[18] + NET HRDATA[18]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 954230 1000 ) N ;
+   - HRDATA[19] + NET HRDATA[19]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 962050 1000 ) N ;
+   - HRDATA[10] + NET HRDATA[10]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 891670 1000 ) N ;
+   - HRDATA[20] + NET HRDATA[20]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 969870 1000 ) N ;
+   - HRDATA[21] + NET HRDATA[21]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 977690 1000 ) N ;
+   - HRDATA[22] + NET HRDATA[22]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 985510 1000 ) N ;
+   - HWDATA[26] + NET HWDATA[26]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 711810 1000 ) N ;
+   - HWDATA[27] + NET HWDATA[27]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 719630 1000 ) N ;
+   - HWDATA[28] + NET HWDATA[28]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 727450 1000 ) N ;
+   - HWDATA[29] + NET HWDATA[29]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 735270 1000 ) N ;
+   - HRDATA[23] + NET HRDATA[23]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 993330 1000 ) N ;
+   - HWDATA[30] + NET HWDATA[30]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 743090 1000 ) N ;
+   - HWDATA[31] + NET HWDATA[31]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 750910 1000 ) N ;
+   - HRDATA[24] + NET HRDATA[24]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1001150 1000 ) N ;
+   - user_irq[0] + NET user_irq[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1071530 1000 ) N ;
+   - user_irq[10] + NET user_irq[10]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1149730 1000 ) N ;
+   - user_irq[11] + NET user_irq[11]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1157550 1000 ) N ;
+   - user_irq[12] + NET user_irq[12]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 1165370 1000 ) N ;
+   - sio_oeb[0] + NET sio_oeb[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2461750 1000 ) N ;
+   - sio_oeb[1] + NET sio_oeb[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2485210 1000 ) N ;
+   - sio_out[0] + NET sio_out[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2453930 1000 ) N ;
+   - sio_out[1] + NET sio_out[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2477390 1000 ) N ;
+   - sio_in[0] + NET sio_in[0]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2446110 1000 ) N ;
+   - sio_in[1] + NET sio_in[1]
+     + PORT
+        + LAYER met2 ( -140 -3000 ) ( 140 3000 )        + PLACED ( 2469570 1000 ) N ;
+   - vssa2 + NET vssa2
+     + USE GROUND
+     + PORT
+        + LAYER met4 ( -11950 -1595 ) ( 11950 1595 )        + PLACED ( 36645 1595 ) N 
+     + PORT
+        + LAYER met4 ( -11950 -1595 ) ( 11950 1595 )        + PLACED ( 86540 1595 ) N 
+     + PORT
+        + LAYER met3 ( -1610 -11950 ) ( 1610 11950 )        + PLACED ( 1610 1863595 ) N 
+     + PORT
+        + LAYER met3 ( -1610 -11950 ) ( 1610 11950 )        + PLACED ( 1610 1913490 ) N ;
+   - vdda2 + NET vdda2
+     + USE POWER
+     + PORT
+        + LAYER met4 ( -11950 -1595 ) ( 11950 1595 )        + PLACED ( 206540 1595 ) N 
+     + PORT
+        + LAYER met4 ( -11950 -1595 ) ( 11950 1595 )        + PLACED ( 156645 1595 ) N 
+     + PORT
+        + LAYER met3 ( -1610 -11950 ) ( 1610 11950 )        + PLACED ( 1610 1748595 ) N 
+     + PORT
+        + LAYER met3 ( -1610 -11950 ) ( 1610 11950 )        + PLACED ( 1610 1798490 ) N ;
+   - ibias100 + NET ibias100
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1695885 2299250 ) N ;
+   - ibias50 + NET ibias50
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1693325 2299250 ) N ;
+   - gpio3_0_analog + NET gpio3_0_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1752205 2299250 ) N ;
+   - gpio3_1_analog + NET gpio3_1_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1749645 2299250 ) N ;
+   - gpio3_2_analog + NET gpio3_2_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1747085 2299250 ) N ;
+   - gpio3_3_analog + NET gpio3_3_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1744525 2299250 ) N ;
+   - gpio3_4_analog + NET gpio3_4_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1741965 2299250 ) N ;
+   - gpio3_5_analog + NET gpio3_5_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1739405 2299250 ) N ;
+   - gpio3_6_analog + NET gpio3_6_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1736845 2299250 ) N ;
+   - gpio3_7_analog + NET gpio3_7_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1734285 2299250 ) N ;
+   - gpio4_0_analog + NET gpio4_0_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1731725 2299250 ) N ;
+   - gpio4_1_analog + NET gpio4_1_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1729165 2299250 ) N ;
+   - gpio4_2_analog + NET gpio4_2_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1726605 2299250 ) N ;
+   - gpio4_3_analog + NET gpio4_3_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1724045 2299250 ) N ;
+   - gpio4_4_analog + NET gpio4_4_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1721485 2299250 ) N ;
+   - gpio4_5_analog + NET gpio4_5_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1718925 2299250 ) N ;
+   - gpio4_6_analog + NET gpio4_6_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1716365 2299250 ) N ;
+   - gpio4_7_analog + NET gpio4_7_analog
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1713805 2299250 ) N ;
+   - ulpcomp_p + NET ulpcomp_p
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1711245 2299250 ) N ;
+   - ulpcomp_n + NET ulpcomp_n
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1708685 2299250 ) N ;
+   - comp_p + NET comp_p
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1706125 2299250 ) N ;
+   - comp_n + NET comp_n
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1703565 2299250 ) N ;
+   - adc1 + NET adc1
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1701005 2299250 ) N ;
+   - adc0 + NET adc0
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1698445 2299250 ) N ;
+   - vbgsc + NET vbgsc
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1690765 2299250 ) N ;
+   - vbgtc + NET vbgtc
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1688205 2299250 ) N ;
+   - dac1 + NET dac1
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1685645 2299250 ) N ;
+   - dac0 + NET dac0
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1683085 2299250 ) N ;
+   - tempsense + NET tempsense
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1680525 2299250 ) N ;
+   - right_vref + NET right_vref
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1677965 2299250 ) N ;
+   - left_vref + NET left_vref
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1675405 2299250 ) N ;
+   - vinref + NET vinref
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1672845 2299250 ) N ;
+   - voutref + NET voutref
+     + PORT
+        + LAYER met4 ( -320 -750 ) ( 320 750 )        + PLACED ( 1670285 2299250 ) N ;
+   - vssa1 + NET vssa1
+     + USE GROUND
+     + PORT
+        + LAYER met4 ( -11950 -1595 ) ( 11950 1595 )        + PLACED ( 2633460 1595 ) N 
+     + PORT
+        + LAYER met4 ( -11950 -1595 ) ( 11950 1595 )        + PLACED ( 2683355 1595 ) N 
+     + PORT
+        + LAYER met3 ( -1610 -11950 ) ( 1610 11950 )        + PLACED ( 2718390 1854805 ) N 
+     + PORT
+        + LAYER met3 ( -1610 -11950 ) ( 1610 11950 )        + PLACED ( 2718390 1904700 ) N ;
+   - vdda1 + NET vdda1
+     + USE POWER
+     + PORT
+        + LAYER met4 ( -11950 -1595 ) ( 11950 1595 )        + PLACED ( 2563355 1595 ) N 
+     + PORT
+        + LAYER met4 ( -11950 -1595 ) ( 11950 1595 )        + PLACED ( 2513460 1595 ) N 
+     + PORT
+        + LAYER met3 ( -1610 -11950 ) ( 1610 11950 )        + PLACED ( 2718390 1784705 ) N 
+     + PORT
+        + LAYER met3 ( -1610 -11950 ) ( 1610 11950 )        + PLACED ( 2718390 1734810 ) N ;
+   - gpio1_in[6] + NET gpio1_in[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1311380 ) N ;
+   - gpio1_in[7] + NET gpio1_in[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1380740 ) N ;
+   - gpio1_oeb[5] + NET gpio1_oeb[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1288260 ) N ;
+   - gpio1_oeb[6] + NET gpio1_oeb[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1357620 ) N ;
+   - gpio1_oeb[7] + NET gpio1_oeb[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1426980 ) N ;
+   - gpio1_out[6] + NET gpio1_out[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1334500 ) N ;
+   - gpio1_out[7] + NET gpio1_out[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1403860 ) N ;
+   - gpio2_in[0] + NET gpio2_in[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1450100 ) N ;
+   - gpio2_in[1] + NET gpio2_in[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1519460 ) N ;
+   - gpio2_in[2] + NET gpio2_in[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1588820 ) N ;
+   - gpio2_in[3] + NET gpio2_in[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1658180 ) N ;
+   - gpio2_in[4] + NET gpio2_in[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2028100 ) N ;
+   - gpio2_in[5] + NET gpio2_in[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2097460 ) N ;
+   - gpio2_in[6] + NET gpio2_in[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2166820 ) N ;
+   - gpio2_in[7] + NET gpio2_in[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2236180 ) N ;
+   - gpio2_oeb[0] + NET gpio2_oeb[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1496340 ) N ;
+   - gpio2_oeb[1] + NET gpio2_oeb[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1565700 ) N ;
+   - gpio2_oeb[2] + NET gpio2_oeb[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1635060 ) N ;
+   - gpio2_oeb[3] + NET gpio2_oeb[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1704420 ) N ;
+   - gpio2_oeb[4] + NET gpio2_oeb[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2074340 ) N ;
+   - gpio2_oeb[5] + NET gpio2_oeb[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2143700 ) N ;
+   - gpio2_oeb[6] + NET gpio2_oeb[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2213060 ) N ;
+   - gpio2_oeb[7] + NET gpio2_oeb[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2282420 ) N ;
+   - gpio2_out[0] + NET gpio2_out[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1473220 ) N ;
+   - gpio2_out[1] + NET gpio2_out[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1542580 ) N ;
+   - gpio2_out[2] + NET gpio2_out[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1611940 ) N ;
+   - gpio2_out[3] + NET gpio2_out[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1681300 ) N ;
+   - gpio2_out[4] + NET gpio2_out[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2051220 ) N ;
+   - gpio2_out[5] + NET gpio2_out[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2120580 ) N ;
+   - gpio2_out[6] + NET gpio2_out[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2189940 ) N ;
+   - gpio2_out[7] + NET gpio2_out[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 2259300 ) N ;
+   - gpio1_in[5] + NET gpio1_in[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1242020 ) N ;
+   - gpio1_oeb[4] + NET gpio1_oeb[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1218900 ) N ;
+   - gpio1_out[4] + NET gpio1_out[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1195780 ) N ;
+   - gpio1_out[5] + NET gpio1_out[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1265140 ) N ;
+   - gpio5_in[3] + NET gpio5_in[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2076340 ) N ;
+   - gpio5_oeb[0] + NET gpio5_oeb[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2238180 ) N ;
+   - gpio5_oeb[1] + NET gpio5_oeb[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2168820 ) N ;
+   - gpio5_oeb[2] + NET gpio5_oeb[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2099460 ) N ;
+   - gpio5_oeb[3] + NET gpio5_oeb[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2030100 ) N ;
+   - gpio5_out[0] + NET gpio5_out[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2261300 ) N ;
+   - gpio5_out[1] + NET gpio5_out[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2191940 ) N ;
+   - gpio5_out[2] + NET gpio5_out[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2122580 ) N ;
+   - gpio5_out[3] + NET gpio5_out[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2053220 ) N ;
+   - gpio5_in[0] + NET gpio5_in[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2284420 ) N ;
+   - gpio5_in[1] + NET gpio5_in[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2215060 ) N ;
+   - gpio5_in[2] + NET gpio5_in[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 2145700 ) N ;
+   - gpio5_in[4] + NET gpio5_in[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1704420 ) N ;
+   - gpio5_in[5] + NET gpio5_in[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1635060 ) N ;
+   - gpio5_in[6] + NET gpio5_in[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1565700 ) N ;
+   - gpio5_in[7] + NET gpio5_in[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1496340 ) N ;
+   - gpio5_oeb[4] + NET gpio5_oeb[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1658180 ) N ;
+   - gpio5_oeb[5] + NET gpio5_oeb[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1588820 ) N ;
+   - gpio5_oeb[6] + NET gpio5_oeb[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1519460 ) N ;
+   - gpio5_oeb[7] + NET gpio5_oeb[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1450100 ) N ;
+   - gpio5_out[4] + NET gpio5_out[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1681300 ) N ;
+   - gpio5_out[5] + NET gpio5_out[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1611940 ) N ;
+   - gpio5_out[6] + NET gpio5_out[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1542580 ) N ;
+   - gpio5_out[7] + NET gpio5_out[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1473220 ) N ;
+   - gpio6_in[0] + NET gpio6_in[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1426980 ) N ;
+   - gpio6_in[1] + NET gpio6_in[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1357620 ) N ;
+   - gpio6_in[2] + NET gpio6_in[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1288260 ) N ;
+   - gpio6_oeb[0] + NET gpio6_oeb[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1380740 ) N ;
+   - gpio6_oeb[1] + NET gpio6_oeb[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1311380 ) N ;
+   - gpio6_out[0] + NET gpio6_out[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1403860 ) N ;
+   - gpio6_out[1] + NET gpio6_out[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1334500 ) N ;
+   - gpio6_in[3] + NET gpio6_in[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1218900 ) N ;
+   - gpio6_oeb[2] + NET gpio6_oeb[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1242020 ) N ;
+   - gpio6_out[2] + NET gpio6_out[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1265140 ) N ;
+   - gpio6_out[3] + NET gpio6_out[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1195780 ) N ;
+   - gpio7_in[2] + NET gpio7_in[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 731900 ) N ;
+   - gpio7_oeb[0] + NET gpio7_oeb[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 824380 ) N ;
+   - gpio7_oeb[1] + NET gpio7_oeb[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 755020 ) N ;
+   - gpio7_out[0] + NET gpio7_out[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 847500 ) N ;
+   - gpio7_out[1] + NET gpio7_out[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 778140 ) N ;
+   - gpio7_in[0] + NET gpio7_in[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 870620 ) N ;
+   - gpio7_in[1] + NET gpio7_in[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 801260 ) N ;
+   - gpio6_oeb[7] + NET gpio6_oeb[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 895220 ) N ;
+   - gpio6_in[5] + NET gpio6_in[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1080180 ) N ;
+   - gpio6_in[6] + NET gpio6_in[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1010820 ) N ;
+   - gpio6_in[4] + NET gpio6_in[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1149540 ) N ;
+   - gpio6_in[7] + NET gpio6_in[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 941460 ) N ;
+   - gpio6_out[4] + NET gpio6_out[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1126420 ) N ;
+   - gpio6_out[5] + NET gpio6_out[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1057060 ) N ;
+   - gpio6_out[6] + NET gpio6_out[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 987700 ) N ;
+   - gpio6_out[7] + NET gpio6_out[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 918340 ) N ;
+   - gpio7_in[3] + NET gpio7_in[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 571540 ) N ;
+   - gpio7_in[4] + NET gpio7_in[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 502180 ) N ;
+   - gpio7_in[5] + NET gpio7_in[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 432820 ) N ;
+   - gpio7_in[6] + NET gpio7_in[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 363460 ) N ;
+   - gpio7_in[7] + NET gpio7_in[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 294100 ) N ;
+   - gpio7_oeb[2] + NET gpio7_oeb[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 594660 ) N ;
+   - gpio7_oeb[3] + NET gpio7_oeb[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 525300 ) N ;
+   - gpio7_oeb[4] + NET gpio7_oeb[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 455940 ) N ;
+   - gpio7_oeb[5] + NET gpio7_oeb[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 386580 ) N ;
+   - gpio7_oeb[6] + NET gpio7_oeb[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 317220 ) N ;
+   - gpio7_oeb[7] + NET gpio7_oeb[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 247860 ) N ;
+   - gpio7_out[2] + NET gpio7_out[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 617780 ) N ;
+   - gpio7_out[3] + NET gpio7_out[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 548420 ) N ;
+   - gpio7_out[4] + NET gpio7_out[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 479060 ) N ;
+   - gpio7_out[5] + NET gpio7_out[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 409700 ) N ;
+   - gpio7_out[6] + NET gpio7_out[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 340340 ) N ;
+   - gpio7_out[7] + NET gpio7_out[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 270980 ) N ;
+   - gpio6_oeb[3] + NET gpio6_oeb[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1172660 ) N ;
+   - gpio6_oeb[4] + NET gpio6_oeb[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1103300 ) N ;
+   - gpio6_oeb[5] + NET gpio6_oeb[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 1033940 ) N ;
+   - gpio6_oeb[6] + NET gpio6_oeb[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 1000 964580 ) N ;
+   - gpio0_in[1] + NET gpio0_in[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 166750 ) N ;
+   - gpio0_in[2] + NET gpio0_in[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 236110 ) N ;
+   - gpio0_in[3] + NET gpio0_in[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 305470 ) N ;
+   - gpio0_in[4] + NET gpio0_in[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 374830 ) N ;
+   - gpio0_in[5] + NET gpio0_in[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 444190 ) N ;
+   - gpio0_in[6] + NET gpio0_in[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 513550 ) N ;
+   - gpio0_in[7] + NET gpio0_in[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 582910 ) N ;
+   - gpio0_oeb[0] + NET gpio0_oeb[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 143630 ) N ;
+   - gpio0_oeb[1] + NET gpio0_oeb[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 212990 ) N ;
+   - gpio0_oeb[2] + NET gpio0_oeb[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 282350 ) N ;
+   - gpio0_oeb[3] + NET gpio0_oeb[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 351710 ) N ;
+   - gpio0_oeb[4] + NET gpio0_oeb[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 421070 ) N ;
+   - gpio0_oeb[5] + NET gpio0_oeb[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 490430 ) N ;
+   - gpio0_oeb[6] + NET gpio0_oeb[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 559790 ) N ;
+   - gpio0_oeb[7] + NET gpio0_oeb[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 629150 ) N ;
+   - gpio0_out[0] + NET gpio0_out[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 120510 ) N ;
+   - gpio0_out[1] + NET gpio0_out[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 189870 ) N ;
+   - gpio0_out[2] + NET gpio0_out[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 259230 ) N ;
+   - gpio0_out[3] + NET gpio0_out[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 328590 ) N ;
+   - gpio0_out[4] + NET gpio0_out[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 397950 ) N ;
+   - gpio1_in[0] + NET gpio1_in[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 895220 ) N ;
+   - gpio1_in[1] + NET gpio1_in[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 964580 ) N ;
+   - gpio1_in[2] + NET gpio1_in[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1033940 ) N ;
+   - gpio1_in[3] + NET gpio1_in[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1103300 ) N ;
+   - gpio1_in[4] + NET gpio1_in[4]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1172660 ) N ;
+   - gpio0_out[5] + NET gpio0_out[5]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 467310 ) N ;
+   - gpio1_oeb[0] + NET gpio1_oeb[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 941460 ) N ;
+   - gpio1_oeb[1] + NET gpio1_oeb[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1010820 ) N ;
+   - gpio1_oeb[2] + NET gpio1_oeb[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1080180 ) N ;
+   - gpio1_oeb[3] + NET gpio1_oeb[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1149540 ) N ;
+   - gpio0_out[6] + NET gpio0_out[6]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 536670 ) N ;
+   - gpio1_out[0] + NET gpio1_out[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 918340 ) N ;
+   - gpio1_out[1] + NET gpio1_out[1]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 987700 ) N ;
+   - gpio1_out[2] + NET gpio1_out[2]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1057060 ) N ;
+   - gpio1_out[3] + NET gpio1_out[3]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 1126420 ) N ;
+   - gpio0_out[7] + NET gpio0_out[7]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 606030 ) N ;
+   - gpio0_in[0] + NET gpio0_in[0]
+     + PORT
+        + LAYER met3 ( -3000 -300 ) ( 3000 300 )        + PLACED ( 2719000 97390 ) N ;
+END PINS
+
+END DESIGN
+

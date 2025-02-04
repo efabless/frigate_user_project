@@ -1,0 +1,84 @@
+# Design files:
+VERILOG_FILES:
+    - dir::../../verilog/rtl/defines.v
+    - dir::../../verilog/rtl/ahb_counter.v
+    - dir::../../verilog/rtl/user_project_wrapper.v
+PNR_SDC_FILE: dir::base.sdc
+
+# Hardening strategy variables (this is for 2-Full-Wrapper Flattening). Visit https://docs.google.com/document/d/1pf-wbpgjeNEM-1TcvX2OJTkHjqH_C9p-LURCASS0Zo8 for more info
+SYNTH_ELABORATE_ONLY: false
+RUN_POST_GPL_DESIGN_REPAIR: true
+RUN_POST_CTS_RESIZER_TIMING: true
+FP_PDN_ENABLE_RAILS: true
+RUN_ANTENNA_REPAIR: true
+RUN_FILL_INSERTION: true
+RUN_TAP_ENDCAP_INSERTION: true
+RUN_CTS: true
+RUN_IRDROP_REPORT: false
+
+# PDN configurations
+FP_PDN_VOFFSET: 15
+FP_PDN_HOFFSET: 15
+FP_PDN_VWIDTH: 3.1
+FP_PDN_HWIDTH: 3.1
+FP_PDN_VSPACING: 15.5
+FP_PDN_HSPACING: 15.5
+FP_PDN_VPITCH: 90
+FP_PDN_HPITCH: 90
+ERROR_ON_PDN_VIOLATIONS: false
+
+# Magic variables
+MAGIC_DRC_USE_GDS: true
+
+# Project-specific Configurations
+ERROR_ON_SYNTH_CHECKS: false
+
+# Fixed configurations for caravel. You should NOT edit this section
+DESIGN_NAME: user_project_wrapper
+FP_SIZING: absolute
+DIE_AREA: 
+    - 0 
+    - 0
+    - 2720
+    - 2300
+CORE_AREA: 
+    - 10
+    - 10
+    - 2710
+    - 2290
+FP_DEF_TEMPLATE: dir::fixed_dont_change/user_project_wrapper.def
+VDD_NETS: 
+    - vccd1
+    - vccd2
+GND_NETS: 
+    - vssd1
+    - vssd2
+PDN_OBSTRUCTIONS:
+    - met4 1664 2293 1758 2300
+    - met4 19 0 224 4
+    - met4 2496 0 2701 4
+ROUTING_OBSTRUCTIONS: 
+    - met4 1664 2293 1758 2300
+    - met4 19 0 224 4
+    - met4 2496 0 2701 4
+FP_PDN_CORE_RING: true
+FP_PDN_CORE_RING_VWIDTH: 3.1
+FP_PDN_CORE_RING_HWIDTH: 3.1
+FP_PDN_CORE_RING_VOFFSET: 15
+FP_PDN_CORE_RING_HOFFSET: 15
+FP_PDN_CORE_RING_VSPACING: 1.7
+FP_PDN_CORE_RING_HSPACING: 1.7
+CLOCK_PORT: HCLK
+SIGNOFF_SDC_FILE: dir::signoff.sdc
+MAGIC_DEF_LABELS: false
+CLOCK_PERIOD: 25
+MAGIC_ZEROIZE_ORIGIN: false
+FP_TEMPLATE_PINS:
+    - vdda1
+    - vssa1
+    - vdda2
+    - vssa2
+meta:
+  flow: Classic
+  substituting_steps:
+    "+OpenROAD.DetailedRouting": "Frigate.CustomApplyDEFTemplate"
