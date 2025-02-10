@@ -1,0 +1,9 @@
+CARAVEL_ROOT: /home/passant/efabless/frigate-upw-example/frigate
+MCW_ROOT: /home/passant/efabless/frigate-upw-example/dependencies/caravel_mgmt_soc
+PDK: sky130A
+PDK_ROOT: /home/passant/efabless/frigate-upw-example/dependencies/pdks
+USER_PROJECT_ROOT: /home/passant/efabless/frigate-upw-example
+caravan: false
+clk: 20
+emailto:
+- null

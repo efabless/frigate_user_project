@@ -1,11 +1,12 @@
 import os
+from typing import List, Optional
+
 from openlane.steps import Step
 from openlane.steps.odb import ApplyDEFTemplate
-from .__version__ import __version__
-from typing import List, Optional
 from openlane.config import Variable
 from openlane.common import get_script_dir
 
+from .__version__ import __version__
 
 @Step.factory.register()
 class CustomApplyDEFTemplate(ApplyDEFTemplate):
