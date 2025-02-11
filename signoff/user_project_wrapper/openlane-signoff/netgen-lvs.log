@@ -2,15 +2,15 @@ Netgen 1.5.278 compiled on Sun Sep 29 13:29:03 UTC 2024
 Warning: netgen command 'format' use fully-qualified name '::netgen::format'
 Warning: netgen command 'global' use fully-qualified name '::netgen::global'
 Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
-Reading SPICE netlist file '/home/passant/OpenLane/pdks/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice'...
+Reading SPICE netlist file '/home/passant/efabless/frigate-upw-example/dependencies/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice'...
 Call to undefined subcircuit sky130_fd_pr__pfet_01v8_hvt
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__nfet_01v8
 Creating placeholder cell definition.
-Reading SPICE netlist file '/home/passant/OpenLane/pdks/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_12.spice'...
-Reading SPICE netlist file '/home/passant/OpenLane/pdks/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_4.spice'...
-Reading SPICE netlist file '/home/passant/OpenLane/pdks/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_8.spice'...
-Reading SPICE netlist file '/home/passant/OpenLane/pdks/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice'...
+Reading SPICE netlist file '/home/passant/efabless/frigate-upw-example/dependencies/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_12.spice'...
+Reading SPICE netlist file '/home/passant/efabless/frigate-upw-example/dependencies/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_4.spice'...
+Reading SPICE netlist file '/home/passant/efabless/frigate-upw-example/dependencies/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_8.spice'...
+Reading SPICE netlist file '/home/passant/efabless/frigate-upw-example/dependencies/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice'...
 Call to undefined subcircuit sky130_fd_pr__res_generic_po
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__special_nfet_01v8
@@ -169,7 +169,7 @@ Note:  Implicit pin X in instance clkload0 of sky130_fd_sc_hd__clkbuf_4 in cell 
 Treating empty subcircuits as black-box cells
 Generating JSON file result
 
-Reading setup file /nix/store/1713bzlk8w8z17prigcs0xh0ha523ii5-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/netgen/setup.tcl
+Reading setup file /nix/store/393ivdn5b9n9m0bz60b04g6zf9xjvajd-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/netgen/setup.tcl
 
 Model sky130_fd_pr__res_generic_po pin 1 == 2
 No property value found for device sky130_fd_pr__res_generic_po
@@ -228,8 +228,8 @@ No property perim found for device sky130_fd_pr__special_pfet_01v8_hvt
 No property topography found for device sky130_fd_pr__special_pfet_01v8_hvt
 No property value found for device sky130_fd_pr__diode_pw2nd_05v5
 No property mult found for device sky130_fd_pr__diode_pw2nd_05v5
-Comparison output logged to file /home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/const/68-netgen-lvs/reports/lvs.netgen.rpt
-Logging to file "/home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/const/68-netgen-lvs/reports/lvs.netgen.rpt" enabled
+Comparison output logged to file /home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/25_02_10_21_31/68-netgen-lvs/reports/lvs.netgen.rpt
+Logging to file "/home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/25_02_10_21_31/68-netgen-lvs/reports/lvs.netgen.rpt" enabled
 
 Contents of circuit 1:  Circuit: 'sky130_fd_sc_hd__decap_6'
 Circuit sky130_fd_sc_hd__decap_6 contains 0 device instances.
@@ -638,5 +638,5 @@ Circuit 1 contains 586 nets,    Circuit 2 contains 586 nets.
 Final result: 
 Circuits match uniquely.
 .
-Logging to file "/home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/const/68-netgen-lvs/reports/lvs.netgen.rpt" disabled
+Logging to file "/home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/25_02_10_21_31/68-netgen-lvs/reports/lvs.netgen.rpt" disabled
 LVS Done.

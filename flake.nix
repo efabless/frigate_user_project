@@ -1,7 +1,7 @@
 {
   inputs = {
     openlane = {
-      url = github:efabless/openlane2/dev;
+      url = github:efabless/openlane2/main;
     };
   };
 
