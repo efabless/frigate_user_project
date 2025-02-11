@@ -1,0 +1,20 @@
+design_info.yaml
+*.log
+sim_build
+sim
+*.
+./wb_models/housekeepingWB/__pycache__
+*.xml
+*.yml
+*.hex*
+*.elf
+AN.DB
+includes.v
+*.lst
+
+# Python
+__pycache__
+/build
+/venv
+/dist
+/*.egg-info

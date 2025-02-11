@@ -1,0 +1,1 @@
+from all_tests.cheetah_test.gpio_portA.gpio_portA import gpio_portA
