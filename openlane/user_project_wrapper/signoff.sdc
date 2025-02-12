@@ -45,7 +45,7 @@ puts "\[INFO\]: Setting timing derate to: 5.0 %"
 #------------------------------------------#
 
 # Clock source latency
-set clk_max_latency 4.85
+set clk_max_latency 3
 set clk_min_latency 2.22
 set_clock_latency -source -max $clk_max_latency [get_clocks {clk}]
 set_clock_latency -source -min $clk_min_latency [get_clocks {clk}]

@@ -52,23 +52,18 @@ module ahb_counter #(
     reg [BITS-1:0] COUNT_REG;
     reg CTRL_REG;
 
-	always @(posedge HCLK or negedge HRESETn) if(~HRESETn) COUNT_REG <= 0;
-                                        else if(ahbl_we & (last_HADDR[16-1:0]==COUNT_REG_OFFSET))
-                                            COUNT_REG <= HWDATA[BITS-1:0];
-
+	always @(posedge HCLK or negedge HRESETn) 
+    begin
+        if(~HRESETn)
+            COUNT_REG <= 0;
+        else if(ahbl_we & (last_HADDR[16-1:0]==COUNT_REG_OFFSET))
+            COUNT_REG <= HWDATA[BITS-1:0];
+        else if(CTRL_REG & ~ahbl_we) 
+            COUNT_REG <= COUNT_REG + 1;
+    end
 	always @(posedge HCLK or negedge HRESETn) if(~HRESETn) CTRL_REG <= 0;
                                         else if(ahbl_we & (last_HADDR[16-1:0]==CTRL_REG_OFFSET))
                                             CTRL_REG <= HWDATA[1-1:0];
-
-    always @(posedge HCLK or negedge HRESETn) begin
-        if (~HRESETn) begin
-            COUNT_REG <= 0;
-            CTRL_REG <= 0;
-        end else begin
-            if (CTRL_REG & ~ahbl_we) 
-                COUNT_REG <= COUNT_REG + 1;
-        end
-    end
 
 	assign	HRDATA = 
 			(last_HADDR[16-1:0] == CTRL_REG_OFFSET)	? CTRL_REG :

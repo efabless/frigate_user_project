@@ -187,6 +187,10 @@ $(designs) : export current_design=$@
 $(designs) : % : $(PROJECT_ROOT)/openlane/%/config.yaml
 	# $(current_design)
 	@rm -rf $(PROJECT_ROOT)/openlane/$*/runs/$(OPENLANE2_RUN_TAG)
+ifeq ($(current_design),user_project_wrapper)
+	openlane_args += $(PROJECT_ROOT)/openlane/$(current_design)/fixed_dont_change/fixed_config.yaml
+endif
+
 ifeq ($(OPENLANE2_USE_NIX),1)
 	nix develop --command openlane $(openlane_args) $(openlane_extra_args)
 else
