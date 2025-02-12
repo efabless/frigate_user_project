@@ -1,0 +1,15 @@
+name: Run All
+on: 
+  push:
+  workflow_dispatch:
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run make setup
+      run: |
+        GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} make setup
