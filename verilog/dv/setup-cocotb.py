@@ -10,7 +10,7 @@ import yaml
 @click.argument('user_project_root', type=click.Path(exists=True))
 def update_design_info(caravel_root, mcw_root, pdk_root, pdk, user_project_root):
     data = {
-        'CARAVEL_ROOT': caravel_root,
+        'FRIGATE_ROOT': caravel_root,
         'MCW_ROOT': mcw_root,
         'USER_PROJECT_ROOT': user_project_root,
         'PDK_ROOT': pdk_root,
