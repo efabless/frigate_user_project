@@ -43,6 +43,7 @@ FP_TEMPLATE_PINS:
     - vssa1
     - vdda2
     - vssa2
+
 meta:
   flow: Classic
   substituting_steps:
