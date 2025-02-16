@@ -15,7 +15,7 @@
 # SPDX-License-Identifier: Apache-2.0
 MAKEFLAGS+=--warn-undefined-variables
 export FRIGATE_ROOT?=$(PWD)/dependencies/frigate
-export FRIGATE_REPO_URL?=git@github.com:efabless/frigate-os-dev.git # TODO: change to os directory
+export FRIGATE_REPO_URL?=https://github.com/efabless/frigate-os.git
 export FRIGATE_BRANCH?=cocotb
 export MGMT_ROOT?=$(FRIGATE_ROOT)/dependencies/caravel_mgmt_soc
 export MGMT_REPO_URL?=https://github.com/efabless/caravel_mgmt_soc_litex.git
