@@ -6,10 +6,8 @@ on:
 jobs:
   Test:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
     steps:
     - uses: actions/checkout@v4
     - name: Run make setup
       run: |
-        make check_dependencies pdk-with-volare setup-cocotb 
+        make setup
