@@ -16,7 +16,7 @@
 MAKEFLAGS+=--warn-undefined-variables
 export FRIGATE_ROOT?=$(PWD)/dependencies/frigate
 export FRIGATE_REPO_URL?=https://github.com/efabless/frigate-os.git
-export FRIGATE_BRANCH?=cocotb
+export FRIGATE_BRANCH?=main
 export MGMT_ROOT?=$(FRIGATE_ROOT)/dependencies/caravel_mgmt_soc
 export MGMT_REPO_URL?=https://github.com/efabless/caravel_mgmt_soc_litex.git
 export MGMT_BRANCH?=Add_newfill
