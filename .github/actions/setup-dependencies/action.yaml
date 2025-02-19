@@ -21,7 +21,6 @@ runs:
         echo "IPM_ROOT=$HOME/.ipm" >> $GITHUB_ENV
         echo "PDK=sky130A" >> $GITHUB_ENV
         echo "FRIGATE_BRANCH=$(make echo-var VAR=FRIGATE_BRANCH)" >> $GITHUB_ENV
-        echo "IPS_VERSION=$(sha256sum ip/dependencies.json | cut -d ' ' -f1)" >> $GITHUB_ENV
         echo "MGMT_BRANCH=$(make echo-var VAR=MGMT_BRANCH)" >> $GITHUB_ENV
         echo "OPEN_PDKS_COMMIT=$(make echo-var VAR=OPEN_PDKS_COMMIT)" >> $GITHUB_ENV
     - name: Cache FRIGATE
@@ -45,14 +44,6 @@ runs:
         path: ${{env.PDK_ROOT}}
         key: pdk-${{env.OPEN_PDKS_COMMIT}}
         enableCrossOsArchive: "true"
-    - name: Cache IPs
-      id: cache-ips
-      uses: actions/cache/restore@v4
-      with:
-        path: ${{env.IPM_ROOT}}
-        key: ips-${{env.IPS_VERSION}}
-        enableCrossOsArchive: "true"
-
     - name: Download FRIGATE
       shell: bash
       if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
@@ -67,18 +58,14 @@ runs:
         make install-mcw
         cd ${{ env.MGMT_ROOT }}
         rm -rf maglef def openlane scripts signoff spi LICENSE manifest docs lib litex lvs .git .githooks .github .travisCI docs lib spef xschem .gitignore .readthedocs.yml .travis.yml README.rst README.src.rst
-      
     - name: Download PANAMAX
       shell: bash
       run: |
         make install-panamax
-
     - name: Download analog
       shell: bash
       run: |
         make install-analog
-  
-    
     - name: Download PDK
       shell: bash
       if: ${{ steps.cache-pdk.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
@@ -86,11 +73,6 @@ runs:
         mkdir -p ${{ env.PDK_ROOT }}
         make pdk-with-volare
         cd ${{ env.PDK_ROOT }}
-    - name: Download IPs
-      shell: bash
-      run: |
-        make install-ips
-
     - name: Save Cache FRIGATE
       if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' }}
       uses: actions/cache/save@v4
@@ -109,9 +91,3 @@ runs:
       with:
         path: ${{env.PDK_ROOT}}
         key: pdk-${{env.OPEN_PDKS_COMMIT}}
-    - name: Save Cache IPs
-      if: ${{ steps.cache-ips.outputs.cache-hit != 'true' }}
-      uses: actions/cache/save@v4
-      with:
-        path: ${{env.IPM_ROOT}}
-        key: ips-${{env.IPS_VERSION}}
