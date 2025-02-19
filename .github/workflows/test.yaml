@@ -9,6 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Setup Dependencies
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         make setup
     - name: Run RTL Verification
