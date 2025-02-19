@@ -8,6 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Run make setup
+    - name: Setup Dependencies
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         make setup
+    - name: Run RTL Verification
+      run: |
+        make cocotb-verify-all-rtl
+    - name: Debug
+      if: always()
+      run: |
+          cat ./verilog/dv/cocotb/sim/*/*/*.log
+
