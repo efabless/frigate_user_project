@@ -51,17 +51,17 @@ runs:
       shell: bash
       if: ${{ steps.cache-mgmt.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
       run: |
-        make -C {{env.FRIGATE_ROOT }} install-mcw
+        make -C ${{ env.FRIGATE_ROOT }} install-mcw
         cd ${{ env.MGMT_ROOT }}
         rm -rf maglef def openlane scripts signoff spi LICENSE manifest docs lib litex lvs .git .githooks .github .travisCI docs lib spef xschem .gitignore .readthedocs.yml .travis.yml README.rst README.src.rst
     - name: Download PANAMAX
       shell: bash
       run: |
-        make -C {{env.FRIGATE_ROOT }} install-panamax
+        make -C ${{ env.FRIGATE_ROOT }} install-panamax
     - name: Download analog
       shell: bash
       run: |
-        make -C {{env.FRIGATE_ROOT }} install-analog
+        make -C ${{ env.FRIGATE_ROOT }} install-analog
     - name: Download PDK
       shell: bash
       if: ${{ steps.cache-pdk.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 

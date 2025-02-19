@@ -223,11 +223,6 @@ endif
 .PHONY: harden
 harden: $(designs)
 
-.PHONY: echo-var
-echo-var:
-	@echo $($(VAR))
-
-
 .PHONY: clean
 clean:
 	rm -rf dependencies
