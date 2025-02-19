@@ -9,6 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: ./.github/actions/setup-dependencies
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Setup Dependencies
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
