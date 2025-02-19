@@ -111,17 +111,17 @@ setup-cocotb-env:
 
 .PHONY: cocotb-verify-all-rtl
 cocotb-verify-all-rtl: 
-	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -tl user_proj_tests/user_proj_tests.yaml --CI )
+	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -tl user_proj_tests/user_proj_tests.yaml $(COCOTB_ARGS) )
 	
 .PHONY: cocotb-verify-all-gl
 cocotb-verify-all-gl:
-	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -tl user_proj_tests/user_proj_tests_gl.yaml -sim GL --CI)
+	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -tl user_proj_tests/user_proj_tests_gl.yaml -sim GL $(COCOTB_ARGS))
 
 $(cocotb-dv-targets-rtl): cocotb-verify-%-rtl: 
-	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -t $*  --CI)
+	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -t $*  $(COCOTB_ARGS))
 	
 $(cocotb-dv-targets-gl): cocotb-verify-%-gl:
-	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -t $* -sim GL --CI)
+	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -t $* -sim GL $(COCOTB_ARGS))
 
 # Install cocotb docker
 .PHONY: simenv-cocotb
@@ -222,6 +222,11 @@ endif
 
 .PHONY: harden
 harden: $(designs)
+
+.PHONY: echo-var
+echo-var:
+	@echo $($(VAR))
+
 
 .PHONY: clean
 clean:

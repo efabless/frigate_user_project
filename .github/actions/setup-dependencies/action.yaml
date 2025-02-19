@@ -5,9 +5,6 @@ inputs:
     required: false
     type: boolean
     default: false
-  github-token:
-    required: true
-    type: string
 runs:
   using: "composite"
   steps:
@@ -18,7 +15,6 @@ runs:
         echo "FRIGATE_ROOT=$(make echo-var VAR=FRIGATE_ROOT)" >> $GITHUB_ENV
         echo "MGMT_ROOT=$(make echo-var VAR=MGMT_ROOT)" >> $GITHUB_ENV
         echo "PDK_ROOT=$(make echo-var VAR=PDK_ROOT)" >> $GITHUB_ENV
-        echo "IPM_ROOT=$HOME/.ipm" >> $GITHUB_ENV
         echo "PDK=sky130A" >> $GITHUB_ENV
         echo "FRIGATE_BRANCH=$(make echo-var VAR=FRIGATE_BRANCH)" >> $GITHUB_ENV
         echo "MGMT_BRANCH=$(make echo-var VAR=MGMT_BRANCH)" >> $GITHUB_ENV
@@ -55,17 +51,17 @@ runs:
       shell: bash
       if: ${{ steps.cache-mgmt.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
       run: |
-        make install-mcw
+        make -C {{env.FRIGATE_ROOT }} install-mcw
         cd ${{ env.MGMT_ROOT }}
         rm -rf maglef def openlane scripts signoff spi LICENSE manifest docs lib litex lvs .git .githooks .github .travisCI docs lib spef xschem .gitignore .readthedocs.yml .travis.yml README.rst README.src.rst
     - name: Download PANAMAX
       shell: bash
       run: |
-        make install-panamax
+        make -C {{env.FRIGATE_ROOT }} install-panamax
     - name: Download analog
       shell: bash
       run: |
-        make install-analog
+        make -C {{env.FRIGATE_ROOT }} install-analog
     - name: Download PDK
       shell: bash
       if: ${{ steps.cache-pdk.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
