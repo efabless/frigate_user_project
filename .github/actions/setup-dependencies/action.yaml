@@ -65,6 +65,8 @@ runs:
     - name: Download PDK
       shell: bash
       if: ${{ steps.cache-pdk.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         mkdir -p ${{ env.PDK_ROOT }}
         make pdk-with-volare
