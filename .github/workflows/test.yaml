@@ -25,7 +25,7 @@ jobs:
       if: always()
       run: |
           cat ./verilog/dv/cocotb/sim/*/*/*.log
-    - uses: cachix/install-nix-action
+    - uses: cachix/install-nix-action@v30
       with:
         extraPullNames: openlane
     - name: Run OpenLane
