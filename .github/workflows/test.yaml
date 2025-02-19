@@ -8,12 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - uses: ./.github/actions/setup-dependencies
     - name: Setup Dependencies
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         make setup
     - name: Run RTL Verification
+      env:
+        COCOTB_ARGS: "--CI -verbosity debug"
       run: |
         make cocotb-verify-all-rtl
     - name: Debug

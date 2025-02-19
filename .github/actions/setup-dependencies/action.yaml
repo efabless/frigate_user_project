@@ -1,0 +1,117 @@
+name: 'Setup Dependencies'
+description: 'Manage Common Dependencies Installation'
+inputs:
+  cache-only:
+    required: false
+    type: boolean
+    default: false
+  github-token:
+    required: true
+    type: string
+runs:
+  using: "composite"
+  steps:
+    - name: Set env
+      shell: bash
+      run: |
+        echo "BASE_DIR=$GITHUB_WORKSPACE" >> "$GITHUB_ENV"
+        echo "FRIGATE_ROOT=$(make echo-var VAR=FRIGATE_ROOT)" >> $GITHUB_ENV
+        echo "MGMT_ROOT=$(make echo-var VAR=MGMT_ROOT)" >> $GITHUB_ENV
+        echo "PDK_ROOT=$(make echo-var VAR=PDK_ROOT)" >> $GITHUB_ENV
+        echo "IPM_ROOT=$HOME/.ipm" >> $GITHUB_ENV
+        echo "PDK=sky130A" >> $GITHUB_ENV
+        echo "FRIGATE_BRANCH=$(make echo-var VAR=FRIGATE_BRANCH)" >> $GITHUB_ENV
+        echo "IPS_VERSION=$(sha256sum ip/dependencies.json | cut -d ' ' -f1)" >> $GITHUB_ENV
+        echo "MGMT_BRANCH=$(make echo-var VAR=MGMT_BRANCH)" >> $GITHUB_ENV
+        echo "OPEN_PDKS_COMMIT=$(make echo-var VAR=OPEN_PDKS_COMMIT)" >> $GITHUB_ENV
+    - name: Cache FRIGATE
+      id: cache-FRIGATE
+      uses: actions/cache/restore@v4
+      with:
+        path: ${{env.FRIGATE_ROOT}}
+        key: FRIGATE-${{env.FRIGATE_BRANCH}}
+        enableCrossOsArchive: "true"
+    - name: Cache mgmt
+      id: cache-mgmt
+      uses: actions/cache/restore@v4
+      with:
+        path: ${{env.MGMT_ROOT}}
+        key: mgmt-${{env.MGMT_BRANCH}}
+        enableCrossOsArchive: "true"
+    - name: Cache PDK
+      id: cache-pdk
+      uses: actions/cache/restore@v4
+      with:
+        path: ${{env.PDK_ROOT}}
+        key: pdk-${{env.OPEN_PDKS_COMMIT}}
+        enableCrossOsArchive: "true"
+    - name: Cache IPs
+      id: cache-ips
+      uses: actions/cache/restore@v4
+      with:
+        path: ${{env.IPM_ROOT}}
+        key: ips-${{env.IPS_VERSION}}
+        enableCrossOsArchive: "true"
+
+    - name: Download FRIGATE
+      shell: bash
+      if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
+      run: |
+        make install-frigate
+        cd ${{ env.FRIGATE_ROOT }}
+        rm -rf maglef def openlane signoff spi LICENSE manifest .git
+    - name: Download mgmt
+      shell: bash
+      if: ${{ steps.cache-mgmt.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
+      run: |
+        make install-mcw
+        cd ${{ env.MGMT_ROOT }}
+        rm -rf maglef def openlane scripts signoff spi LICENSE manifest docs lib litex lvs .git .githooks .github .travisCI docs lib spef xschem .gitignore .readthedocs.yml .travis.yml README.rst README.src.rst
+      
+    - name: Download PANAMAX
+      shell: bash
+      run: |
+        make install-panamax
+
+    - name: Download analog
+      shell: bash
+      run: |
+        make install-analog
+  
+    
+    - name: Download PDK
+      shell: bash
+      if: ${{ steps.cache-pdk.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
+      run: |
+        mkdir -p ${{ env.PDK_ROOT }}
+        make pdk-with-volare
+        cd ${{ env.PDK_ROOT }}
+    - name: Download IPs
+      shell: bash
+      run: |
+        make install-ips
+
+    - name: Save Cache FRIGATE
+      if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' }}
+      uses: actions/cache/save@v4
+      with:
+        path: ${{env.FRIGATE_ROOT}}
+        key: FRIGATE-${{env.FRIGATE_BRANCH}}
+    - name: Save Cache mgmt
+      if: ${{ steps.cache-mgmt.outputs.cache-hit != 'true' }}
+      uses: actions/cache/save@v4
+      with:
+        path: ${{env.MGMT_ROOT}}
+        key: mgmt-${{env.MGMT_BRANCH}}
+    - name: Save Cache PDK
+      if: ${{ steps.cache-pdk.outputs.cache-hit != 'true' }}
+      uses: actions/cache/save@v4
+      with:
+        path: ${{env.PDK_ROOT}}
+        key: pdk-${{env.OPEN_PDKS_COMMIT}}
+    - name: Save Cache IPs
+      if: ${{ steps.cache-ips.outputs.cache-hit != 'true' }}
+      uses: actions/cache/save@v4
+      with:
+        path: ${{env.IPM_ROOT}}
+        key: ips-${{env.IPS_VERSION}}
