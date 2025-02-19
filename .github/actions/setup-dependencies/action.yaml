@@ -47,13 +47,11 @@ runs:
       if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
       run: |
         make install-frigate
-        cd ${{ env.FRIGATE_ROOT }}
     - name: Download mgmt
       shell: bash
       if: ${{ steps.cache-mgmt.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
       run: |
         make -C ${{ env.FRIGATE_ROOT }} install-mcw
-        cd ${{ env.MGMT_ROOT }}
     - name: Download PDK
       shell: bash
       if: ${{ steps.cache-pdk.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
