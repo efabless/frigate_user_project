@@ -1,4 +1,4 @@
-#include <cheetah_regs.h>
+#include <frigate_regs.h>
 #include <EF_GPIO8.h>
 #include <EF_GPIO8.c>
 #include <clk_rst.h>

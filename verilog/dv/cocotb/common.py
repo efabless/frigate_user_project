@@ -4,7 +4,7 @@ from cocotb.triggers import RisingEdge, ClockCycles
 import cocotb
 from cocotb.clock import Clock
 import oyaml as yaml
-from all_tests.cheetah_env import Cheetah_env
+from frigate_env import Frigate_env
 
 def read_config_file():
     config_file = f"{cocotb.plusargs['SIM_DIR']}/configs.yaml".replace('"', "")
@@ -20,9 +20,9 @@ def read_config_file():
 async def test_configure_ml(dut, timeout_cycles=3346140, reset_jtag=True, modify_flash_ctr=True, start_up=True):
     if "GL" not in cocotb.plusargs:
         caravelEnv = await test_configure(dut, timeout_cycles=timeout_cycles, start_up=False, num_error=200,)
-        cheetah_env = Cheetah_env(dut)
-        cheetah_env.clock_obj = caravelEnv.clock_obj
-        caravelEnv = cheetah_env
+        frigate_env = Frigate_env(dut)
+        frigate_env.clock_obj = caravelEnv.clock_obj
+        caravelEnv = frigate_env
         # await clock_generated(dut)
         if start_up:
             await caravelEnv.power_up()
@@ -37,9 +37,9 @@ async def test_configure_ml(dut, timeout_cycles=3346140, reset_jtag=True, modify
     else:
         # configure_ext_jtag_clk(dut, read_config_file()['clock'], reset_jtag)
         caravelEnv = await test_configure(dut, timeout_cycles=timeout_cycles, start_up=False, num_error=200,)
-        cheetah_env = Cheetah_env(dut)
-        cheetah_env.clock_obj = caravelEnv.clock_obj
-        caravelEnv = cheetah_env
+        frigate_env = Frigate_env(dut)
+        frigate_env.clock_obj = caravelEnv.clock_obj
+        caravelEnv = frigate_env
         # if "GL_SDF" in cocotb.plusargs:
         #     force_fork = await cocotb.start(gl_forces(caravelEnv))
             # caravelEnv.dut.resetb_tb.value = 0

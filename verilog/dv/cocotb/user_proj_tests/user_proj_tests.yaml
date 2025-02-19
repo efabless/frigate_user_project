@@ -1,0 +1,2 @@
+Tests: 
+  - {name: gpio_portA, sim: RTL}

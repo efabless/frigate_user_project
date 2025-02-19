@@ -6,7 +6,7 @@ from cocotb.handle import Release
 from cocotb.triggers import ClockCycles, Timer
 from cocotb.handle import Force, Release
 
-class Cheetah_env(Caravel_env):
+class Frigate_env(Caravel_env):
     def __init__(self, dut: SimHandleBase):
         super().__init__(dut)
         self.active_gpios_num = 72

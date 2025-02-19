@@ -1,8 +1,8 @@
 from caravel_cocotb.caravel_interfaces import report_test
 import cocotb
-from all_tests.common import test_configure_ml
+from common import test_configure_ml
 import random
-from all_tests.gpio import GPIOsPortB, GPIOsPortA
+from frigate_test.gpio import GPIOsPortB, GPIOsPortA
 
 @cocotb.test()
 @report_test
