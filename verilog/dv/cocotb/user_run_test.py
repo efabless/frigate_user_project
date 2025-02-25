@@ -186,6 +186,8 @@ class UserRunTest(RunTest):
 
     def iverilog_compile(self):
         macros = " -D" + " -D".join(self.test.macros)
+        if os.path.isfile(f"{self.test.compilation_dir}/sim.vvp"):
+            os.remove(f"{self.test.compilation_dir}/sim.vvp")
         compile_command = (
             f"cd {self.test.compilation_dir} &&"
             f"iverilog -g2012 -Ttyp {macros} {self.iverilog_dirs} -o {self.test.compilation_dir}/sim.vvp -s caravel_top"
@@ -201,6 +203,8 @@ class UserRunTest(RunTest):
 
 
     def vcs_compile(self):
+        if os.path.isfile(f"{self.test.compilation_dir}/simv"):
+            os.remove(f"{self.test.compilation_dir}/simv")
         macros = " +define+" + " +define+".join(self.test.macros)
         vlogan_cmd = f"cd {self.test.compilation_dir}; vlogan -full64 -negdelay -sverilog +error+30 {self.paths.FRIGATE_ROOT}/verilog/vip/toplevel_cocotb.v {self.vcs_dirs}  {macros}   -l {self.test.compilation_dir}/analysis.log -o {self.test.compilation_dir} "
         self.run_command_write_to_file(vlogan_cmd, self.test.compilation_log, self.logger, quiet=False if self.args.verbosity == "debug" else True)

@@ -1,1 +1,2 @@
 from frigate_test.gpio_portA.gpio_portA import gpio_portA
+from user_proj_tests.counter.counter import counter
