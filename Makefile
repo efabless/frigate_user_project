@@ -36,6 +36,7 @@ export PDKPATH?=$(PDK_ROOT)/$(PDK)
 .PHONY: setup
 setup: check_dependencies install-frigate pdk-with-volare setup-cocotb 
 
+
 .PHONY: check_dependencies
 check_dependencies:
 	@if [ ! -d "$(PWD)/dependencies" ]; then \
@@ -57,20 +58,6 @@ install-volare:
 	$(PYTHON_BIN) -m venv ./venv
 	./venv/bin/$(PYTHON_BIN) -m pip install --upgrade --no-cache-dir pip
 	./venv/bin/$(PYTHON_BIN) -m pip install --upgrade --no-cache-dir volare
-
-# Include mgmt should be cloned by make install repos inside frigate
-# .PHONY: install-mcw
-# install-mcw:
-# 	if [ -d "$(MGMT_ROOT)" ]; then\
-# 		MAKE_DIR="$(PWD)"; \
-# 		echo "Updating $(MGMT_ROOT)"; \
-# 		cd $(MGMT_ROOT) && \
-# 		git checkout $(MGMT_BRANCH) && git pull; \
-# 		cd "$$MAKE_DIR"; \
-# 	else \
-# 		echo "Cloning $(MGMT_REPO_URL) -b $(MGMT_BRANCH)"; \
-# 		git clone -b $(MGMT_BRANCH) $(MGMT_REPO_URL) $(MGMT_ROOT) --depth=1 --single-branch; \
-# 	fi
 
 # Include frigate
 .PHONY: install-frigate
@@ -143,13 +130,12 @@ echo-var:
 
 
 # Harden with Openlane2
-OPENLANE2_TAG ?= 2.3.3
+OPENLANE2_TAG ?= 2.3.5
 OPENLANE2_IMAGE_NAME ?= efabless/openlane:$(OPENLANE2_TAG)
 OPENLANE2_RUN_TAG = $(shell date '+%y_%m_%d_%H_%M')
 OPENLANE2_USE_NIX ?= 1
 ROOTLESS ?= 0
 USER_ARGS = -u $$(id -u $$USER):$$(id -g $$USER)
-designs = $(shell cd $(PROJECT_ROOT)/openlane && find * -maxdepth 0 -type d)
 current_design = null
 
 ifeq ($(ROOTLESS), 1)
@@ -208,17 +194,29 @@ list:
 	@echo $(designs)
 
 # export PYTHONPATH=$(PROJECT_ROOT)/openlane_plugin_Frigate:\$$PYTHONPATH
+designs = $(shell cd $(PROJECT_ROOT)/openlane && find * -maxdepth 0 -type d ! -name "user_project_wrapper")
+ifeq ($(OPENLANE2_USE_NIX),1)
+openlane_cmd=nix develop --command openlane $(openlane_args) $(openlane_extra_args)
+else
+openlane_cmd=$(PROJECT_ROOT)/openlane2-venv/bin/python3 -m openlane $(docker_mounts) $(openlane_extra_args) --dockerized $(openlane_args) $(openlane_extra_args)
+endif
+
+define run_openlane
+	rm -rf $(PROJECT_ROOT)/openlane/$*/runs/$(OPENLANE2_RUN_TAG)
+	$(openlane_cmd) $1
+endef
+
+.PHONY: user_project_wrapper
+user_project_wrapper: % : $(PROJECT_ROOT)/openlane/user_project_wrapper/config.yaml
+	$(call run_openlane,$(PROJECT_ROOT)/openlane/user_project_wrapper/fixed_config.yaml)
+# $(openlane_cmd) $(PROJECT_ROOT)/openlane/user_project_wrapper/fixed_config.yaml -c "step"=Frigate.CustomApplyDEFTemplate
+	sh $(PROJECT_ROOT)/openlane/copy_views.sh $(PROJECT_ROOT) $* $(OPENLANE2_RUN_TAG)
+
 .PHONY: $(designs)
 $(designs) : export current_design=$@
 $(designs) : % : $(PROJECT_ROOT)/openlane/%/config.yaml
-	# $(current_design)
-	@rm -rf $(PROJECT_ROOT)/openlane/$*/runs/$(OPENLANE2_RUN_TAG)
-ifeq ($(OPENLANE2_USE_NIX),1)
-	nix develop --command openlane $(openlane_args) $(openlane_extra_args)
-else
-	$(PROJECT_ROOT)/openlane2-venv/bin/python3 -m openlane $(docker_mounts) $(openlane_extra_args) --dockerized $(openlane_args) $(openlane_extra_args)
-endif
-	@sh $(PROJECT_ROOT)/openlane/copy_views.sh $(PROJECT_ROOT) $* $(OPENLANE2_RUN_TAG)
+	$(call run_openlane)
+	sh $(PROJECT_ROOT)/openlane/copy_views.sh $(PROJECT_ROOT) $* $(OPENLANE2_RUN_TAG)
 
 .PHONY: harden
 harden: $(designs)

@@ -1,4 +1,4 @@
-# Design files:
+# Design files
 VERILOG_FILES:
     - dir::../../verilog/rtl/defines.v
     - dir::../../verilog/rtl/ahb_counter.v
@@ -27,58 +27,8 @@ FP_PDN_VPITCH: 90
 FP_PDN_HPITCH: 90
 ERROR_ON_PDN_VIOLATIONS: false
 
-# Magic variables
+# Magic variables 
 MAGIC_DRC_USE_GDS: true
 
 # Project-specific Configurations
 ERROR_ON_SYNTH_CHECKS: false
-
-# Fixed configurations for caravel. You should NOT edit this section
-DESIGN_NAME: user_project_wrapper
-FP_SIZING: absolute
-DIE_AREA: 
-    - 0 
-    - 0
-    - 2720
-    - 2300
-CORE_AREA: 
-    - 10
-    - 10
-    - 2710
-    - 2290
-FP_DEF_TEMPLATE: dir::fixed_dont_change/user_project_wrapper.def
-VDD_NETS: 
-    - vccd1
-    - vccd2
-GND_NETS: 
-    - vssd1
-    - vssd2
-PDN_OBSTRUCTIONS:
-    - met4 1664 2293 1758 2300
-    - met4 19 0 224 4
-    - met4 2496 0 2701 4
-ROUTING_OBSTRUCTIONS: 
-    - met4 1664 2293 1758 2300
-    - met4 19 0 224 4
-    - met4 2496 0 2701 4
-FP_PDN_CORE_RING: true
-FP_PDN_CORE_RING_VWIDTH: 3.1
-FP_PDN_CORE_RING_HWIDTH: 3.1
-FP_PDN_CORE_RING_VOFFSET: 15
-FP_PDN_CORE_RING_HOFFSET: 15
-FP_PDN_CORE_RING_VSPACING: 1.7
-FP_PDN_CORE_RING_HSPACING: 1.7
-CLOCK_PORT: HCLK
-SIGNOFF_SDC_FILE: dir::signoff.sdc
-MAGIC_DEF_LABELS: false
-CLOCK_PERIOD: 25
-MAGIC_ZEROIZE_ORIGIN: false
-FP_TEMPLATE_PINS:
-    - vdda1
-    - vssa1
-    - vdda2
-    - vssa2
-meta:
-  flow: Classic
-  substituting_steps:
-    "+OpenROAD.DetailedRouting": "Frigate.CustomApplyDEFTemplate"
