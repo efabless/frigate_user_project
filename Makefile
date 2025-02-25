@@ -130,7 +130,7 @@ echo-var:
 
 
 # Harden with Openlane2
-OPENLANE2_TAG ?= 2.3.5
+OPENLANE2_TAG ?= 2.3.10
 OPENLANE2_IMAGE_NAME ?= efabless/openlane:$(OPENLANE2_TAG)
 OPENLANE2_RUN_TAG = $(shell date '+%y_%m_%d_%H_%M')
 OPENLANE2_USE_NIX ?= 1
@@ -193,10 +193,9 @@ docker_run = \
 list:
 	@echo $(designs)
 
-# export PYTHONPATH=$(PROJECT_ROOT)/openlane_plugin_Frigate:\$$PYTHONPATH
 designs = $(shell cd $(PROJECT_ROOT)/openlane && find * -maxdepth 0 -type d ! -name "user_project_wrapper")
 ifeq ($(OPENLANE2_USE_NIX),1)
-openlane_cmd=nix develop --command openlane $(openlane_args) $(openlane_extra_args)
+openlane_cmd=nix develop github:efabless/openlane2/$(OPENLANE2_TAG) --command openlane $(openlane_args) $(openlane_extra_args)
 else
 openlane_cmd=$(PROJECT_ROOT)/openlane2-venv/bin/python3 -m openlane $(docker_mounts) $(openlane_extra_args) --dockerized $(openlane_args) $(openlane_extra_args)
 endif
@@ -204,19 +203,17 @@ endif
 define run_openlane
 	rm -rf $(PROJECT_ROOT)/openlane/$*/runs/$(OPENLANE2_RUN_TAG)
 	$(openlane_cmd) $1
+	sh $(PROJECT_ROOT)/openlane/copy_views.sh $(PROJECT_ROOT) $* $(OPENLANE2_RUN_TAG)
 endef
 
 .PHONY: user_project_wrapper
 user_project_wrapper: % : $(PROJECT_ROOT)/openlane/user_project_wrapper/config.yaml
 	$(call run_openlane,$(PROJECT_ROOT)/openlane/user_project_wrapper/fixed_config.yaml)
-# $(openlane_cmd) $(PROJECT_ROOT)/openlane/user_project_wrapper/fixed_config.yaml -c "step"=Frigate.CustomApplyDEFTemplate
-	sh $(PROJECT_ROOT)/openlane/copy_views.sh $(PROJECT_ROOT) $* $(OPENLANE2_RUN_TAG)
 
 .PHONY: $(designs)
 $(designs) : export current_design=$@
 $(designs) : % : $(PROJECT_ROOT)/openlane/%/config.yaml
-	$(call run_openlane)
-	sh $(PROJECT_ROOT)/openlane/copy_views.sh $(PROJECT_ROOT) $* $(OPENLANE2_RUN_TAG)
+	$(call run_openlane,)
 
 .PHONY: harden
 harden: $(designs)

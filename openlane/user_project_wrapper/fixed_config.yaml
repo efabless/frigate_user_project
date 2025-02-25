@@ -1,16 +1,8 @@
 # Fixed configurations for frigate. You should NOT edit this section
 DESIGN_NAME: user_project_wrapper
 FP_SIZING: absolute
-DIE_AREA: 
-    - 0 
-    - 0
-    - 2720
-    - 2300
-CORE_AREA: 
-    - 10
-    - 10
-    - 2710
-    - 2290
+DIE_AREA: [0, 0, 2720, 2300]
+CORE_AREA: [10, 10, 2710, 2290]
 FP_DEF_TEMPLATE: dir::fixed_dont_change/user_project_wrapper.def
 VDD_NETS: 
     - vccd1
@@ -38,13 +30,7 @@ SIGNOFF_SDC_FILE: dir::signoff.sdc
 MAGIC_DEF_LABELS: false
 CLOCK_PERIOD: 25
 MAGIC_ZEROIZE_ORIGIN: false
-FP_TEMPLATE_PINS:
-    - vdda1
-    - vssa1
-    - vdda2
-    - vssa2
 
-meta:
-  flow: Classic
-  substituting_steps:
-    +OpenROAD.DetailedRouting: Frigate.CustomApplyDEFTemplate
+# Add multiple pins for analog power 
+FP_TEMPLATE_COPY_POWER_PINS: true
+FP_TEMPLATE_MATCH_MODE: permissive
