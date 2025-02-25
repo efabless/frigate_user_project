@@ -10,7 +10,7 @@ set_clock_transition 0.1500 [get_clocks {clk}]
 set_clock_uncertainty 0.2500 clk
 set_propagated_clock [get_clocks {clk}]
 set_clock_latency -source -min 2.2200 [get_clocks {clk}]
-set_clock_latency -source -max 3.0000 [get_clocks {clk}]
+set_clock_latency -source -max 4.8500 [get_clocks {clk}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[0]}]
 set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[0]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[10]}]

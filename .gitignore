@@ -1,3 +1,4 @@
-frigate/
 venv/
 venv-cocotb/
+openlane/*/runs
+dependencies/

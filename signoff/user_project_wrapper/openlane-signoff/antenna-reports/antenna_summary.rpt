@@ -1,10 +1,40 @@
-┏━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━┓
-┃ P / R ┃ Partial ┃ Required ┃ Net                        ┃ Pin      ┃ Layer ┃
-┡━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━┩
-│ 4.51  │ 1802.83 │ 400.00   │ net79                      │ hold80/A │ met1  │
-│ 2.88  │ 1150.43 │ 400.00   │ frigate_prj.last_HADDR[2\] │ _198_/A0 │ met1  │
-│ 2.88  │ 1150.43 │ 400.00   │ frigate_prj.last_HADDR[2\] │ hold69/A │ met1  │
-│ 1.75  │ 701.14  │ 400.00   │ net90                      │ hold84/A │ met1  │
-│ 1.59  │ 635.61  │ 400.00   │ net79                      │ _159_/C  │ met1  │
-│ 1.12  │ 447.22  │ 400.00   │ net75                      │ hold72/A │ met1  │
-└───────┴─────────┴──────────┴────────────────────────────┴──────────┴───────┘
+┏━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ P / R ┃ Partial ┃ Required ┃ Net        ┃ Pin                    ┃ Layer ┃
+┡━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ 9.54  │ 3817.27 │ 400.00   │ HADDR[15]  │ frigate_prj/HADDR[15]  │ met3  │
+│ 9.48  │ 3793.90 │ 400.00   │ HADDR[14]  │ frigate_prj/HADDR[14]  │ met3  │
+│ 9.43  │ 3770.54 │ 400.00   │ HADDR[13]  │ frigate_prj/HADDR[13]  │ met3  │
+│ 9.37  │ 3747.17 │ 400.00   │ HADDR[12]  │ frigate_prj/HADDR[12]  │ met3  │
+│ 9.31  │ 3723.81 │ 400.00   │ HADDR[11]  │ frigate_prj/HADDR[11]  │ met3  │
+│ 9.25  │ 3700.44 │ 400.00   │ HADDR[10]  │ frigate_prj/HADDR[10]  │ met3  │
+│ 9.20  │ 3680.00 │ 400.00   │ HADDR[9]   │ frigate_prj/HADDR[9]   │ met3  │
+│ 9.10  │ 3639.11 │ 400.00   │ HADDR[7]   │ frigate_prj/HADDR[7]   │ met3  │
+│ 9.02  │ 3606.98 │ 400.00   │ HADDR[6]   │ frigate_prj/HADDR[6]   │ met3  │
+│ 8.90  │ 3560.25 │ 400.00   │ HADDR[4]   │ frigate_prj/HADDR[4]   │ met3  │
+│ 8.61  │ 3443.43 │ 400.00   │ HADDR[2]   │ frigate_prj/HADDR[2]   │ met3  │
+│ 8.42  │ 3367.49 │ 400.00   │ HADDR[1]   │ frigate_prj/HADDR[1]   │ met3  │
+│ 8.35  │ 3338.29 │ 400.00   │ HRESETn    │ frigate_prj/HRESETn    │ met3  │
+│ 8.29  │ 3314.92 │ 400.00   │ HREADY     │ frigate_prj/HREADY     │ met3  │
+│ 8.18  │ 3271.11 │ 400.00   │ HADDR[0]   │ frigate_prj/HADDR[0]   │ met3  │
+│ 5.26  │ 2103.12 │ 400.00   │ HSEL       │ frigate_prj/HSEL       │ met3  │
+│ 1.80  │ 721.40  │ 400.00   │ HWDATA[15] │ frigate_prj/HWDATA[15] │ met3  │
+│ 1.72  │ 689.14  │ 400.00   │ HWDATA[14] │ frigate_prj/HWDATA[14] │ met3  │
+│ 1.67  │ 668.83  │ 400.00   │ HWDATA[13] │ frigate_prj/HWDATA[13] │ met3  │
+│ 1.61  │ 645.46  │ 400.00   │ HWDATA[12] │ frigate_prj/HWDATA[12] │ met3  │
+│ 1.54  │ 616.25  │ 400.00   │ HWRITE     │ frigate_prj/HWRITE     │ met3  │
+│ 1.45  │ 581.21  │ 400.00   │ HWDATA[10] │ frigate_prj/HWDATA[10] │ met3  │
+│ 1.40  │ 561.81  │ 400.00   │ HWDATA[10] │ frigate_prj/HWDATA[10] │ met2  │
+│ 1.39  │ 557.92  │ 400.00   │ HWDATA[13] │ frigate_prj/HWDATA[13] │ met2  │
+│ 1.39  │ 557.92  │ 400.00   │ HWDATA[7]  │ frigate_prj/HWDATA[7]  │ met2  │
+│ 1.38  │ 552.00  │ 400.00   │ HWDATA[8]  │ frigate_prj/HWDATA[8]  │ met3  │
+│ 1.37  │ 549.39  │ 400.00   │ HWDATA[15] │ frigate_prj/HWDATA[15] │ met2  │
+│ 1.37  │ 546.69  │ 400.00   │ HWDATA[14] │ frigate_prj/HWDATA[14] │ met2  │
+│ 1.37  │ 546.58  │ 400.00   │ HWDATA[8]  │ frigate_prj/HWDATA[8]  │ met2  │
+│ 1.36  │ 542.81  │ 400.00   │ HWDATA[12] │ frigate_prj/HWDATA[12] │ met2  │
+│ 1.32  │ 528.63  │ 400.00   │ HWDATA[7]  │ frigate_prj/HWDATA[7]  │ met3  │
+│ 1.32  │ 527.69  │ 400.00   │ HWRITE     │ frigate_prj/HWRITE     │ met2  │
+│ 1.23  │ 490.23  │ 400.00   │ HCLK       │ frigate_prj/HCLK       │ met3  │
+│ 1.16  │ 463.47  │ 400.00   │ HADDR[6]   │ frigate_prj/HADDR[6]   │ met2  │
+│ 1.15  │ 459.69  │ 400.00   │ HADDR[1]   │ frigate_prj/HADDR[1]   │ met2  │
+│ 1.05  │ 421.92  │ 400.00   │ HADDR[10]  │ frigate_prj/HADDR[10]  │ met2  │
+└───────┴─────────┴──────────┴────────────┴────────────────────────┴───────┘
