@@ -14,10 +14,10 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 MAKEFLAGS+=--warn-undefined-variables
-export FRIGATE_ROOT?=$(PWD)/frigate
+export FRIGATE_ROOT?=$(PWD)/dependencies/frigate
 export FRIGATE_REPO_URL?=https://github.com/efabless/frigate-os.git
 export FRIGATE_BRANCH?=main
-export MGMT_ROOT?=$(PWD)/dependencies/caravel_mgmt_soc
+export MGMT_ROOT?=$(FRIGATE_ROOT)/dependencies/caravel_mgmt_soc
 export MGMT_REPO_URL?=https://github.com/efabless/caravel_mgmt_soc_litex.git
 export MGMT_BRANCH?=Add_newfill
 export PDK_ROOT?=$(PWD)/dependencies/pdks
@@ -34,7 +34,8 @@ export PDK?=sky130A
 export PDKPATH?=$(PDK_ROOT)/$(PDK)
 
 .PHONY: setup
-setup: check_dependencies install-mgmt install-frigate pdk-with-volare setup-cocotb 
+setup: check_dependencies install-frigate pdk-with-volare setup-cocotb 
+
 
 .PHONY: check_dependencies
 check_dependencies:
@@ -58,20 +59,6 @@ install-volare:
 	./venv/bin/$(PYTHON_BIN) -m pip install --upgrade --no-cache-dir pip
 	./venv/bin/$(PYTHON_BIN) -m pip install --upgrade --no-cache-dir volare
 
-# Include mgmt
-.PHONY: install-mgmt
-install-mgmt:
-	if [ -d "$(MGMT_ROOT)" ]; then\
-		MAKE_DIR="$(PWD)"; \
-		echo "Updating $(MGMT_ROOT)"; \
-		cd $(MGMT_ROOT) && \
-		git checkout $(MGMT_BRANCH) && git pull; \
-		cd "$$MAKE_DIR"; \
-	else \
-		echo "Cloning $(MGMT_REPO_URL) -b $(MGMT_BRANCH)"; \
-		git clone -b $(MGMT_BRANCH) $(MGMT_REPO_URL) $(MGMT_ROOT) --depth=1 --single-branch; \
-	fi
-
 # Include frigate
 .PHONY: install-frigate
 install-frigate:
@@ -79,12 +66,24 @@ install-frigate:
 		MAKE_DIR="$(PWD)"; \
 		echo "Updating $(FRIGATE_ROOT)"; \
 		cd $(FRIGATE_ROOT) && \
-		git checkout $(FRIGATE_BRANCH) && git pull; \
+		git checkout $(FRIGATE_BRANCH) && git pull && \
+		make install-repos; \
 		cd "$$MAKE_DIR"; \
 	else \
 		echo "Cloning $(FRIGATE_REPO_URL) -b $(FRIGATE_BRANCH)"; \
 		git clone -b $(FRIGATE_BRANCH) $(FRIGATE_REPO_URL) $(FRIGATE_ROOT) --depth=1 --single-branch; \
+		cd $(FRIGATE_ROOT) && \
+		make install-repos; \
+		cd "$$MAKE_DIR"; \
 	fi
+
+dv_patterns=$(shell cd verilog/dv && find * -maxdepth 0 -type d)
+cocotb-dv_patterns=$(shell cd verilog/dv/cocotb && find . -name "*.c"  | sed -e 's|^.*/||' -e 's/.c//')
+dv-targets-rtl=$(dv_patterns:%=verify-%-rtl)
+cocotb-dv-targets-rtl=$(cocotb-dv_patterns:%=cocotb-verify-%-rtl)
+dv-targets-gl=$(dv_patterns:%=verify-%-gl)
+cocotb-dv-targets-gl=$(cocotb-dv_patterns:%=cocotb-verify-%-gl)
+dv-targets-gl-sdf=$(dv_patterns:%=verify-%-gl-sdf)
 
 .PHONY: install-caravel-cocotb
 install-caravel-cocotb:
@@ -96,6 +95,20 @@ install-caravel-cocotb:
 .PHONY: setup-cocotb-env
 setup-cocotb-env:
 	@(python3 $(PROJECT_ROOT)/verilog/dv/setup-cocotb.py $(FRIGATE_ROOT) $(MGMT_ROOT) $(PDK_ROOT) $(PDK) $(PROJECT_ROOT))
+
+.PHONY: cocotb-verify-all-rtl
+cocotb-verify-all-rtl: 
+	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -tl user_proj_tests/user_proj_tests.yaml  -gen_defaults_dir ./../../../dependencies/frigate  $(COCOTB_ARGS) )
+
+.PHONY: cocotb-verify-all-gl 
+cocotb-verify-all-gl:
+	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -tl user_proj_tests/user_proj_tests_gl.yaml -sim GL -gen_defaults_dir ./../../../dependencies/frigate $(COCOTB_ARGS))
+
+$(cocotb-dv-targets-rtl): cocotb-verify-%-rtl: 
+	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -t $*  $(COCOTB_ARGS))
+	
+$(cocotb-dv-targets-gl): cocotb-verify-%-gl:
+	@(cd $(PROJECT_ROOT)/verilog/dv/cocotb && $(PROJECT_ROOT)/venv-cocotb/bin/caravel_cocotb -t $* -sim GL $(COCOTB_ARGS))
 
 # Install cocotb docker
 .PHONY: simenv-cocotb
@@ -207,3 +220,8 @@ $(designs) : % : $(PROJECT_ROOT)/openlane/%/config.yaml
 
 .PHONY: harden
 harden: $(designs)
+
+.PHONY: clean
+clean:
+	rm -rf dependencies
+	rm -rf $(FRIGATE_ROOT)

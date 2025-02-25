@@ -1,0 +1,81 @@
+name: 'Setup Dependencies'
+description: 'Manage Common Dependencies Installation'
+inputs:
+  cache-only:
+    required: false
+    type: boolean
+    default: false
+  github-token:
+    type: string
+runs:
+  using: "composite"
+  steps:
+    - name: Set env
+      shell: bash
+      run: |
+        echo "BASE_DIR=$GITHUB_WORKSPACE" >> "$GITHUB_ENV"
+        echo "FRIGATE_ROOT=$(make echo-var VAR=FRIGATE_ROOT)" >> $GITHUB_ENV
+        echo "MGMT_ROOT=$(make echo-var VAR=MGMT_ROOT)" >> $GITHUB_ENV
+        echo "PDK_ROOT=$(make echo-var VAR=PDK_ROOT)" >> $GITHUB_ENV
+        echo "PDK=sky130A" >> $GITHUB_ENV
+        echo "FRIGATE_BRANCH=$(make echo-var VAR=FRIGATE_BRANCH)" >> $GITHUB_ENV
+        echo "MGMT_BRANCH=$(make echo-var VAR=MGMT_BRANCH)" >> $GITHUB_ENV
+        echo "OPEN_PDKS_COMMIT=$(make echo-var VAR=OPEN_PDKS_COMMIT)" >> $GITHUB_ENV
+    - name: Cache FRIGATE
+      id: cache-FRIGATE
+      uses: actions/cache/restore@v4
+      with:
+        path: ${{env.FRIGATE_ROOT}}
+        key: FRIGATE-${{env.FRIGATE_BRANCH}}
+        enableCrossOsArchive: "true"
+    - name: Cache mgmt
+      id: cache-mgmt
+      uses: actions/cache/restore@v4
+      with:
+        path: ${{env.MGMT_ROOT}}
+        key: mgmt-${{env.MGMT_BRANCH}}
+        enableCrossOsArchive: "true"
+    - name: Cache PDK
+      id: cache-pdk
+      uses: actions/cache/restore@v4
+      with:
+        path: ${{env.PDK_ROOT}}
+        key: pdk-${{env.OPEN_PDKS_COMMIT}}
+        enableCrossOsArchive: "true"
+    - name: Download FRIGATE
+      shell: bash
+      if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
+      run: |
+        make install-frigate
+    - name: Download mgmt
+      shell: bash
+      if: ${{ steps.cache-mgmt.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
+      run: |
+        make -C ${{ env.FRIGATE_ROOT }} install-mcw
+    - name: Download PDK
+      shell: bash
+      if: ${{ steps.cache-pdk.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
+      env: 
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: |
+        mkdir -p ${{ env.PDK_ROOT }}
+        make pdk-with-volare
+        cd ${{ env.PDK_ROOT }}
+    - name: Save Cache FRIGATE
+      if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' }}
+      uses: actions/cache/save@v4
+      with:
+        path: ${{env.FRIGATE_ROOT}}
+        key: FRIGATE-${{env.FRIGATE_BRANCH}}
+    - name: Save Cache mgmt
+      if: ${{ steps.cache-mgmt.outputs.cache-hit != 'true' }}
+      uses: actions/cache/save@v4
+      with:
+        path: ${{env.MGMT_ROOT}}
+        key: mgmt-${{env.MGMT_BRANCH}}
+    - name: Save Cache PDK
+      if: ${{ steps.cache-pdk.outputs.cache-hit != 'true' }}
+      uses: actions/cache/save@v4
+      with:
+        path: ${{env.PDK_ROOT}}
+        key: pdk-${{env.OPEN_PDKS_COMMIT}}
