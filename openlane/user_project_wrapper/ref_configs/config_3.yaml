@@ -4,18 +4,16 @@ VERILOG_FILES:
     - dir::../../verilog/rtl/user_project_wrapper.v
 PNR_SDC_FILE: dir::base.sdc
 
-# Hardening strategy variables (this is for 1-Macro-First Hardening). Visit https://docs.google.com/document/d/1pf-wbpgjeNEM-1TcvX2OJTkHjqH_C9p-LURCASS0Zo8 for more info
-SYNTH_ELABORATE_ONLY: true
-RUN_POST_GPL_DESIGN_REPAIR: false
-RUN_POST_CTS_RESIZER_TIMING: false
-DESIGN_REPAIR_BUFFER_INPUT_PORTS: false
-FP_PDN_ENABLE_RAILS: false
-RUN_ANTENNA_REPAIR: false
-RUN_FILL_INSERTION: false
-RUN_TAP_ENDCAP_INSERTION: false
-RUN_CTS: false
+# Hardening strategy variables (this is for 3-Top-Level Integration). Visit https://docs.google.com/document/d/1pf-wbpgjeNEM-1TcvX2OJTkHjqH_C9p-LURCASS0Zo8 for more info
+SYNTH_ELABORATE_ONLY: false
+RUN_POST_GPL_DESIGN_REPAIR: true
+RUN_POST_CTS_RESIZER_TIMING: true
+FP_PDN_ENABLE_RAILS: true
+RUN_ANTENNA_REPAIR: true
+RUN_FILL_INSERTION: true
+RUN_TAP_ENDCAP_INSERTION: true
+RUN_CTS: true
 RUN_IRDROP_REPORT: false
-ERROR_ON_SYNTH_CHECKS: false
 
 # Macros configurations
 MACROS:
@@ -24,7 +22,7 @@ MACROS:
         lef: dir::../../lef/ahb_counter.lef
         instances:
             frigate_prj:
-                location: [450, 100]
+                location: [450, 450]
                 orientation: "N"
         nl: dir::../../verilog/gl/ahb_counter.v
         spef:
@@ -49,3 +47,6 @@ ERROR_ON_PDN_VIOLATIONS: false
 
 # Magic variables
 MAGIC_DRC_USE_GDS: true
+
+# Project-specific Configurations
+ERROR_ON_SYNTH_CHECKS: false

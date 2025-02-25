@@ -24,7 +24,7 @@ MACROS:
         lef: dir::../../lef/ahb_counter.lef
         instances:
             frigate_prj:
-                location: [450, 100]
+                location: [450, 450]
                 orientation: "N"
         nl: dir::../../verilog/gl/ahb_counter.v
         spef:
@@ -49,3 +49,4 @@ ERROR_ON_PDN_VIOLATIONS: false
 
 # Magic variables
 MAGIC_DRC_USE_GDS: true
+
