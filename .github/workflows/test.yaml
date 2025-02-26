@@ -25,6 +25,8 @@ jobs:
       run: |
         ls ./verilog/dv/cocotb/sim/*/*/*.log
         ls ./verilog/dv/cocotb/sim/*/*/simv
+        ls ./verilog/dv/cocotb/sim/*/*/*
+        ls ./verilog/dv/cocotb/sim/*/*-compilation/*
         simv="$GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI/*-compilation/simv"
         if [ -f $simv ]; then
             echo 'File exists.'
