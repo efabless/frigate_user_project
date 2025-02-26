@@ -83,6 +83,8 @@ runs:
         path: ${{env.PDK_ROOT}}
         key: pdk-${{env.OPEN_PDKS_COMMIT}}
     - name: Install frigate repos
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
       shell: bash
       run: make install-frigate-repos
     - name: Debug
