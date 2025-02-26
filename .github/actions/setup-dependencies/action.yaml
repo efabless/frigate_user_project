@@ -80,3 +80,7 @@ runs:
       with:
         path: ${{env.PDK_ROOT}}
         key: pdk-${{env.OPEN_PDKS_COMMIT}}
+    - name: Debug
+      run: |
+        ls dependencies
+        tree dependencies

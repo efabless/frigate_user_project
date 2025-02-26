@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - run: make install-frigate
     - uses: ./.github/actions/setup-dependencies
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -21,16 +20,21 @@ jobs:
       env:
         COCOTB_ARGS: "--CI -verbosity debug"
       run: |
-        make cocotb-verify-all-gl
+        make cocotb-verify-all-rtl
     - name: Debug
       if: always()
       run: |
           cat ./verilog/dv/cocotb/sim/*/*/*.log
-      #    - name: Install nix
-      #      run: |
-      #        curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm --extra-conf "
-      #            extra-substituters = https://openlane.cachix.org
-      #            extra-trusted-public-keys = openlane.cachix.org-1:qqdwh+QMNGmZAuyeQJTH9ErW57OWSvdtuwfBKdS254E=
-      #        "
-      #    - name: Run OpenLane
-      #      run: make user_project_wrapper
+    - name: Install nix
+      run: |
+        curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm --extra-conf "
+            extra-substituters = https://openlane.cachix.org
+            extra-trusted-public-keys = openlane.cachix.org-1:qqdwh+QMNGmZAuyeQJTH9ErW57OWSvdtuwfBKdS254E=
+        "
+    - name: Run OpenLane
+      run: make user_project_wrapper
+    - name: Run RTL Verification
+      env:
+        COCOTB_ARGS: "--CI -verbosity debug"
+      run: |
+        make cocotb-verify-all-gl
