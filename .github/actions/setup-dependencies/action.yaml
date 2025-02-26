@@ -82,6 +82,9 @@ runs:
       with:
         path: ${{env.PDK_ROOT}}
         key: pdk-${{env.OPEN_PDKS_COMMIT}}
+    - name: Install frigate repos
+      shell: bash
+      run: make install-frigate-repos
     - name: Debug
       shell: bash
       run: |
