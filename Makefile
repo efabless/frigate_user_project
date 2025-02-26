@@ -61,7 +61,7 @@ install-volare:
 
 .PHONY: install-frigate-repos
 install-frigate-repos: install-frigate
-		make install-repos -C $(FRIGATE_ROOT)
+		cd $(FRIGATE_ROOT) && make install-repos
 
 # Include frigate
 .PHONY: install-frigate
