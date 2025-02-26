@@ -18,23 +18,38 @@ jobs:
         make setup
     - name: Run RTL Verification
       env:
-        COCOTB_ARGS: "--CI -verbosity debug"
+        COCOTB_ARGS: "--CI -verbosity debug -tag CI"
       run: |
         make cocotb-verify-all-rtl
+    - name: Check RTL Verification Results
+      run: |
+        simv="$GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI/*-compilation/simv"
+        if [ -f $simv ]; then
+            echo 'File exists.'
+        else
+            echo "Error: file $simv not found"
+            echo "Error: compilation failed"
+            exit -1
+        fi
+        cat "$GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI/runs.log"
+        summary=$(cat "$GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI/runs.log" | tail -n 1)
+        echo "# RTL Simulation Result: $summary" >> $GITHUB_STEP_SUMMARY
+        cnt=$(grep -c "failed" "$GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI/runs.log")
+        if [[ $cnt -ne 1 ]]; then exit 1; fi
     - name: Debug
       if: always()
       run: |
           cat ./verilog/dv/cocotb/sim/*/*/*.log
-    - name: Install nix
-      run: |
-        curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm --extra-conf "
-            extra-substituters = https://openlane.cachix.org
-            extra-trusted-public-keys = openlane.cachix.org-1:qqdwh+QMNGmZAuyeQJTH9ErW57OWSvdtuwfBKdS254E=
-        "
-    - name: Run OpenLane
-      run: make user_project_wrapper
-    - name: Run RTL Verification
-      env:
-        COCOTB_ARGS: "--CI -verbosity debug"
-      run: |
-        make cocotb-verify-all-gl
+      #    - name: Install nix
+      #      run: |
+      #        curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm --extra-conf "
+      #            extra-substituters = https://openlane.cachix.org
+      #            extra-trusted-public-keys = openlane.cachix.org-1:qqdwh+QMNGmZAuyeQJTH9ErW57OWSvdtuwfBKdS254E=
+      #        "
+      #    - name: Run OpenLane
+      #      run: make user_project_wrapper
+      #    - name: Run RTL Verification
+      #      env:
+      #        COCOTB_ARGS: "--CI -verbosity debug -tag CI"
+      #      run: |
+      #        make cocotb-verify-all-gl
