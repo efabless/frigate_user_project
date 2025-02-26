@@ -11,20 +11,20 @@ jobs:
     - uses: ./.github/actions/setup-dependencies
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-      #    - name: Setup Dependencies
-      #      env:
-      #        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #      run: |
-      #        make setup
-      #    - name: Run RTL Verification
-      #      env:
-      #        COCOTB_ARGS: "--CI -verbosity debug"
-      #      run: |
-      #        make cocotb-verify-all-rtl
-      #    - name: Debug
-      #      if: always()
-      #      run: |
-      #          cat ./verilog/dv/cocotb/sim/*/*/*.log
+    - name: Setup Dependencies
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        make setup
+    - name: Run RTL Verification
+      env:
+        COCOTB_ARGS: "--CI -verbosity debug"
+      run: |
+        make cocotb-verify-all-gl
+    - name: Debug
+      if: always()
+      run: |
+          cat ./verilog/dv/cocotb/sim/*/*/*.log
       #    - name: Install nix
       #      run: |
       #        curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm --extra-conf "
