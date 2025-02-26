@@ -1,1 +1,1 @@
-# Frigate-UPW-example
+# Frigate User Project
