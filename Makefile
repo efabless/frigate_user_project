@@ -21,7 +21,7 @@ export MGMT_ROOT?=$(FRIGATE_ROOT)/dependencies/caravel_mgmt_soc
 export MGMT_REPO_URL?=https://github.com/efabless/caravel_mgmt_soc_litex.git
 export MGMT_BRANCH?=Add_newfill
 export PDK_ROOT?=$(PWD)/dependencies/pdks
-export OPEN_PDKS_COMMIT?=0fe599b2afb6708d281543108caf8310912f54af
+export OPEN_PDKS_COMMIT?=0c1df35fd535299ea1ef74d1e9e15dedaeb34c32
 
 export PROJECT_ROOT=$(shell pwd)
 
