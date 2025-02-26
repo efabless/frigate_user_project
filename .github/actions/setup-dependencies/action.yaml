@@ -62,12 +62,12 @@ runs:
         mkdir -p ${{ env.PDK_ROOT }}
         make pdk-with-volare
         cd ${{ env.PDK_ROOT }}
-    - name: Save Cache FRIGATE
-      if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' }}
-      uses: actions/cache/save@v4
-      with:
-        path: ${{env.FRIGATE_ROOT}}
-        key: FRIGATE-${{env.FRIGATE_BRANCH}}
+    #    - name: Save Cache FRIGATE
+    #      if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' }}
+    #      uses: actions/cache/save@v4
+    #      with:
+    #        path: ${{env.FRIGATE_ROOT}}
+    #        key: FRIGATE-${{env.FRIGATE_BRANCH}}
     - name: Save Cache mgmt
       if: ${{ steps.cache-mgmt.outputs.cache-hit != 'true' }}
       uses: actions/cache/save@v4
