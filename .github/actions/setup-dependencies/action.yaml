@@ -21,13 +21,13 @@ runs:
         echo "FRIGATE_BRANCH=$(make echo-var VAR=FRIGATE_BRANCH)" >> $GITHUB_ENV
         echo "MGMT_BRANCH=$(make echo-var VAR=MGMT_BRANCH)" >> $GITHUB_ENV
         echo "OPEN_PDKS_COMMIT=$(make echo-var VAR=OPEN_PDKS_COMMIT)" >> $GITHUB_ENV
-    - name: Cache FRIGATE
-      id: cache-FRIGATE
-      uses: actions/cache/restore@v4
-      with:
-        path: ${{env.FRIGATE_ROOT}}
-        key: FRIGATE-${{env.FRIGATE_BRANCH}}
-        enableCrossOsArchive: "true"
+    #    - name: Cache FRIGATE
+    #      id: cache-FRIGATE
+    #      uses: actions/cache/restore@v4
+    #      with:
+    #        path: ${{env.FRIGATE_ROOT}}
+    #        key: FRIGATE-${{env.FRIGATE_BRANCH}}
+#        enableCrossOsArchive: "true"
     - name: Cache mgmt
       id: cache-mgmt
       uses: actions/cache/restore@v4
@@ -42,11 +42,12 @@ runs:
         path: ${{env.PDK_ROOT}}
         key: pdk-${{env.OPEN_PDKS_COMMIT}}
         enableCrossOsArchive: "true"
-    - name: Download FRIGATE
-      shell: bash
-      if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
-      run: |
-        make install-frigate
+    #    - name: Download FRIGATE
+    #      shell: bash
+    #      if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
+    #      run: |
+    #        rm -rf ${{ env.FRIGATE_ROOT }}
+    #        make install-frigate
     - name: Download mgmt
       shell: bash
       if: ${{ steps.cache-mgmt.outputs.cache-hit != 'true' && inputs.cache-only != 'true' }} 
