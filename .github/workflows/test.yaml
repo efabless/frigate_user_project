@@ -47,10 +47,6 @@ jobs:
         cnt=$(grep -c "failed" "$GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI/runs.log")
         if [[ $cnt -ne 1 ]]; then exit 1; fi
         rm -rf $GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI
-    - name: Debug
-      if: always()
-      run: |
-          cat ./verilog/dv/cocotb/sim/*/*/*.log
     - name: Install nix
       run: |
         curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm --extra-conf "
