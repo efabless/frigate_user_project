@@ -34,7 +34,7 @@ export PDK?=sky130A
 export PDKPATH?=$(PDK_ROOT)/$(PDK)
 
 .PHONY: setup
-setup: check_dependencies install-frigate pdk-with-volare setup-cocotb 
+setup: check_dependencies install-frigate install-frigate-repos pdk-with-volare setup-cocotb 
 
 
 .PHONY: check_dependencies
@@ -59,6 +59,10 @@ install-volare:
 	./venv/bin/$(PYTHON_BIN) -m pip install --upgrade --no-cache-dir pip
 	./venv/bin/$(PYTHON_BIN) -m pip install --upgrade --no-cache-dir volare
 
+.PHONY: install-frigate-repos
+install-frigate-repos: install-frigate
+		make install-repos -C $(FRIGATE_ROOT)
+
 # Include frigate
 .PHONY: install-frigate
 install-frigate:
@@ -67,14 +71,9 @@ install-frigate:
 		echo "Updating $(FRIGATE_ROOT)"; \
 		cd $(FRIGATE_ROOT) && \
 		git checkout $(FRIGATE_BRANCH) && git pull && \
-		make install-repos; \
-		cd "$$MAKE_DIR"; \
 	else \
 		echo "Cloning $(FRIGATE_REPO_URL) -b $(FRIGATE_BRANCH)"; \
 		git clone -b $(FRIGATE_BRANCH) $(FRIGATE_REPO_URL) $(FRIGATE_ROOT) --depth=1 --single-branch; \
-		cd $(FRIGATE_ROOT) && \
-		make install-repos; \
-		cd "$$MAKE_DIR"; \
 	fi
 
 dv_patterns=$(shell cd verilog/dv && find * -maxdepth 0 -type d)

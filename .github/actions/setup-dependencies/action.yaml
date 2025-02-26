@@ -28,6 +28,9 @@ runs:
     #        path: ${{env.FRIGATE_ROOT}}
     #        key: FRIGATE-${{env.FRIGATE_BRANCH}}
 #        enableCrossOsArchive: "true"
+    - name: Install frigate
+      shell: bash
+      run: make install-frigate
     - name: Cache mgmt
       id: cache-mgmt
       uses: actions/cache/restore@v4
@@ -61,7 +64,6 @@ runs:
       run: |
         mkdir -p ${{ env.PDK_ROOT }}
         make pdk-with-volare
-        cd ${{ env.PDK_ROOT }}
     #    - name: Save Cache FRIGATE
     #      if: ${{ steps.cache-FRIGATE.outputs.cache-hit != 'true' }}
     #      uses: actions/cache/save@v4
