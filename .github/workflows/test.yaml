@@ -23,11 +23,7 @@ jobs:
         make cocotb-verify-all-rtl
     - name: Check RTL Verification Results
       run: |
-        echo 1
-        ls ./verilog/dv/cocotb/sim/*/*/*
-        echo 2
-        ls ./verilog/dv/cocotb/sim/*/*-compilation/*
-        simv="$GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI/*-compilation/simv"
+        simv="$GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI/*-compilation/sim.vvp"
         if [ -f $simv ]; then
             echo 'File exists.'
         else
