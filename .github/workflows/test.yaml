@@ -7,6 +7,15 @@ jobs:
   Test:
     runs-on: ubuntu-latest
     steps:
+    - name: Maximize build space
+      uses: easimon/maximize-build-space@master
+      with:
+        remove-dotnet: "true"
+        remove-android: "true"
+        remove-haskell: "true"
+        remove-codeql: "true"
+        remove-docker-images: "true"
+        root-reserve-mb: 20480
     - uses: actions/checkout@v4
     - uses: ./.github/actions/setup-dependencies
       name: Install Cached Dependencies
@@ -37,6 +46,7 @@ jobs:
         echo "# RTL Simulation Result:\n\n$summary" >> $GITHUB_STEP_SUMMARY
         cnt=$(grep -c "failed" "$GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI/runs.log")
         if [[ $cnt -ne 1 ]]; then exit 1; fi
+        rm -rf $GITHUB_WORKSPACE/verilog/dv/cocotb/sim/CI
     - name: Debug
       if: always()
       run: |
