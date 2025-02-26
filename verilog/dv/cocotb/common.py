@@ -57,7 +57,7 @@ async def test_configure_ml(dut, timeout_cycles=3346140, reset_jtag=True, modify
             reset_flash_ctrl(caravelEnv)
             for i in range(10):
                 # dut.uut.frigate_core.soc_flash_ctrl._id(fr"\FC_RESET_counter[{i}] ", False).value = (counter_start >> i) & 1
-                dut.uut.frigate_core._id(fr"\soc.flash_ctrl .\FC_RESET_counter[{i}] ", False).value = (counter_start >> i) & 1
+                dut.uut.frigate_core._id(fr"\soc_flash_ctrl .\FC_RESET_counter[{i}] ", False).value = (counter_start >> i) & 1
 
     dut.uut.frigate_core.sio_vohref.value = 1
     caravelEnv.user_hdl = caravelEnv.dut.uut.frigate_core.user_project
@@ -67,10 +67,10 @@ async def test_configure_ml(dut, timeout_cycles=3346140, reset_jtag=True, modify
 def reset_flash_ctrl(caravelEnv):
     for i in range(4096):
         # caravelEnv.dut.uut.frigate_core.soc_flash_ctrl._id(fr"\CACHE_LINES[{i}] ", False).value = 0
-        caravelEnv.dut.uut.frigate_core._id(fr"\soc.flash_ctrl .\CACHE_LINES[{i}] ", False).value = 0
+        caravelEnv.dut.uut.frigate_core._id(fr"\soc_flash_ctrl .\CACHE_LINES[{i}] ", False).value = 0
     for i in range(448):
         # caravelEnv.dut.uut.frigate_core.soc_flash_ctrl._id(fr"\CACHE_LINES[{i}] ", False).value = 0
-        caravelEnv.dut.uut.frigate_core._id(fr"\soc.flash_ctrl .\CACHE_LINES[{i}] ", False).value = 0
+        caravelEnv.dut.uut.frigate_core._id(fr"\soc_flash_ctrl .\CACHE_LINES[{i}] ", False).value = 0
 
 
 async def gl_forces(caravelEnv):

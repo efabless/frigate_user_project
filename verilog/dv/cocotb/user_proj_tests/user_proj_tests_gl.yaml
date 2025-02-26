@@ -1,2 +1,3 @@
 Tests: 
   - {name: gpio_portA, sim: GL}
+  - {name: counter, sim: GL}
