@@ -70,7 +70,7 @@ install-frigate:
 		MAKE_DIR="$(PWD)"; \
 		echo "Updating $(FRIGATE_ROOT)"; \
 		cd $(FRIGATE_ROOT) && \
-		git checkout $(FRIGATE_BRANCH) && git pull && \
+		git checkout $(FRIGATE_BRANCH) && git pull
 	else \
 		echo "Cloning $(FRIGATE_REPO_URL) -b $(FRIGATE_BRANCH)"; \
 		git clone -b $(FRIGATE_BRANCH) $(FRIGATE_REPO_URL) $(FRIGATE_ROOT) --depth=1 --single-branch; \
