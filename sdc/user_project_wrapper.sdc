@@ -10,85 +10,85 @@ set_clock_transition 0.1500 [get_clocks {clk}]
 set_clock_uncertainty 0.2500 clk
 set_propagated_clock [get_clocks {clk}]
 set_clock_latency -source -min 2.2200 [get_clocks {clk}]
-set_clock_latency -source -max 4.8500 [get_clocks {clk}]
+set_clock_latency -source -max 5.0500 [get_clocks {clk}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[0]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[0]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[0]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[10]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[10]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[10]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[11]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[11]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[11]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[12]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[12]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[12]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[13]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[13]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[13]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[14]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[14]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[14]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[15]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[15]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[15]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[16]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[16]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[16]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[17]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[17]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[17]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[18]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[18]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[18]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[19]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[19]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[19]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[1]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[1]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[1]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[20]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[20]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[20]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[21]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[21]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[21]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[22]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[22]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[22]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[23]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[23]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[23]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[24]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[24]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[24]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[25]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[25]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[25]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[26]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[26]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[26]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[27]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[27]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[27]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[28]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[28]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[28]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[29]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[29]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[29]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[2]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[2]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[2]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[30]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[30]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[30]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[31]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[31]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[31]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[3]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[3]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[3]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[4]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[4]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[4]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[5]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[5]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[5]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[6]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[6]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[6]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[7]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[7]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[7]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[8]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[8]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[8]}]
 set_input_delay 0.7000 -clock [get_clocks {clk}] -min -add_delay [get_ports {HADDR[9]}]
-set_input_delay 12.1200 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[9]}]
+set_input_delay 9.8100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HADDR[9]}]
 set_input_delay 1.1800 -clock [get_clocks {clk}] -min -add_delay [get_ports {HREADY}]
 set_input_delay 4.5800 -clock [get_clocks {clk}] -max -add_delay [get_ports {HREADY}]
 set_input_delay 2.3300 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRESETn}]
 set_input_delay 4.0100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRESETn}]
 set_input_delay 0.8300 -clock [get_clocks {clk}] -min -add_delay [get_ports {HSIZE[0]}]
-set_input_delay 11.7600 -clock [get_clocks {clk}] -max -add_delay [get_ports {HSIZE[0]}]
+set_input_delay 8.7500 -clock [get_clocks {clk}] -max -add_delay [get_ports {HSIZE[0]}]
 set_input_delay 0.8300 -clock [get_clocks {clk}] -min -add_delay [get_ports {HSIZE[1]}]
-set_input_delay 11.7600 -clock [get_clocks {clk}] -max -add_delay [get_ports {HSIZE[1]}]
+set_input_delay 8.7500 -clock [get_clocks {clk}] -max -add_delay [get_ports {HSIZE[1]}]
 set_input_delay 0.8300 -clock [get_clocks {clk}] -min -add_delay [get_ports {HSIZE[2]}]
-set_input_delay 11.7600 -clock [get_clocks {clk}] -max -add_delay [get_ports {HSIZE[2]}]
+set_input_delay 8.7500 -clock [get_clocks {clk}] -max -add_delay [get_ports {HSIZE[2]}]
 set_input_delay 0.8700 -clock [get_clocks {clk}] -min -add_delay [get_ports {HTRANS[0]}]
-set_input_delay 10.3800 -clock [get_clocks {clk}] -max -add_delay [get_ports {HTRANS[0]}]
+set_input_delay 7.2400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HTRANS[0]}]
 set_input_delay 0.8700 -clock [get_clocks {clk}] -min -add_delay [get_ports {HTRANS[1]}]
-set_input_delay 10.3800 -clock [get_clocks {clk}] -max -add_delay [get_ports {HTRANS[1]}]
+set_input_delay 7.2400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HTRANS[1]}]
 set_input_delay 1.0500 -clock [get_clocks {clk}] -min -add_delay [get_ports {HWDATA[0]}]
 set_input_delay 6.1100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HWDATA[0]}]
 set_input_delay 1.0500 -clock [get_clocks {clk}] -min -add_delay [get_ports {HWDATA[10]}]
@@ -153,106 +153,236 @@ set_input_delay 1.0500 -clock [get_clocks {clk}] -min -add_delay [get_ports {HWD
 set_input_delay 6.1100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HWDATA[8]}]
 set_input_delay 1.0500 -clock [get_clocks {clk}] -min -add_delay [get_ports {HWDATA[9]}]
 set_input_delay 6.1100 -clock [get_clocks {clk}] -max -add_delay [get_ports {HWDATA[9]}]
-set_input_delay 0.6300 -clock [get_clocks {clk}] -min -add_delay [get_ports {HWRITE}]
-set_input_delay 10.9700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HWRITE}]
+set_input_delay 0.6400 -clock [get_clocks {clk}] -min -add_delay [get_ports {HWRITE}]
+set_input_delay 8.0600 -clock [get_clocks {clk}] -max -add_delay [get_ports {HWRITE}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[0]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[0]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[0]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[10]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[10]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[10]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[11]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[11]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[11]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[12]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[12]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[12]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[13]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[13]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[13]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[14]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[14]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[14]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[15]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[15]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[15]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[16]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[16]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[16]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[17]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[17]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[17]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[18]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[18]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[18]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[19]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[19]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[19]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[1]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[1]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[1]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[20]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[20]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[20]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[21]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[21]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[21]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[22]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[22]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[22]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[23]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[23]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[23]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[24]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[24]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[24]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[25]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[25]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[25]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[26]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[26]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[26]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[27]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[27]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[27]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[28]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[28]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[28]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[29]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[29]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[29]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[2]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[2]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[2]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[30]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[30]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[30]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[31]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[31]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[31]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[3]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[3]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[3]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[4]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[4]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[4]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[5]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[5]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[5]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[6]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[6]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[6]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[7]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[7]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[7]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[8]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[8]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[8]}]
 set_output_delay 0.0100 -clock [get_clocks {clk}] -min -add_delay [get_ports {HRDATA[9]}]
-set_output_delay 7.5400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[9]}]
+set_output_delay 5.7700 -clock [get_clocks {clk}] -max -add_delay [get_ports {HRDATA[9]}]
 set_output_delay 0.8300 -clock [get_clocks {clk}] -min -add_delay [get_ports {HREADYOUT}]
-set_output_delay 9.8000 -clock [get_clocks {clk}] -max -add_delay [get_ports {HREADYOUT}]
+set_output_delay 8.1400 -clock [get_clocks {clk}] -max -add_delay [get_ports {HREADYOUT}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[0]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[0]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[0]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[10]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[10]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[10]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[11]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[11]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[11]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[12]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[12]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[12]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[13]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[13]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[13]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[14]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[14]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[14]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[15]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[15]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[15]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[1]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[1]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[1]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[2]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[2]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[2]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[3]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[3]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[3]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[4]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[4]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[4]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[5]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[5]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[5]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[6]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[6]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[6]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[7]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[7]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[7]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[8]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[8]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[8]}]
 set_output_delay 0.3900 -clock [get_clocks {clk}] -min -add_delay [get_ports {user_irq[9]}]
-set_output_delay 6.1900 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[9]}]
+set_output_delay 6.1800 -clock [get_clocks {clk}] -max -add_delay [get_ports {user_irq[9]}]
+set_multicycle_path -hold\
+    -through [list [get_ports {HADDR[0]}]\
+           [get_ports {HADDR[10]}]\
+           [get_ports {HADDR[11]}]\
+           [get_ports {HADDR[12]}]\
+           [get_ports {HADDR[13]}]\
+           [get_ports {HADDR[14]}]\
+           [get_ports {HADDR[15]}]\
+           [get_ports {HADDR[16]}]\
+           [get_ports {HADDR[17]}]\
+           [get_ports {HADDR[18]}]\
+           [get_ports {HADDR[19]}]\
+           [get_ports {HADDR[1]}]\
+           [get_ports {HADDR[20]}]\
+           [get_ports {HADDR[21]}]\
+           [get_ports {HADDR[22]}]\
+           [get_ports {HADDR[23]}]\
+           [get_ports {HADDR[24]}]\
+           [get_ports {HADDR[25]}]\
+           [get_ports {HADDR[26]}]\
+           [get_ports {HADDR[27]}]\
+           [get_ports {HADDR[28]}]\
+           [get_ports {HADDR[29]}]\
+           [get_ports {HADDR[2]}]\
+           [get_ports {HADDR[30]}]\
+           [get_ports {HADDR[31]}]\
+           [get_ports {HADDR[3]}]\
+           [get_ports {HADDR[4]}]\
+           [get_ports {HADDR[5]}]\
+           [get_ports {HADDR[6]}]\
+           [get_ports {HADDR[7]}]\
+           [get_ports {HADDR[8]}]\
+           [get_ports {HADDR[9]}]]\
+    -through [list [get_ports {HRDATA[0]}]\
+           [get_ports {HRDATA[10]}]\
+           [get_ports {HRDATA[11]}]\
+           [get_ports {HRDATA[12]}]\
+           [get_ports {HRDATA[13]}]\
+           [get_ports {HRDATA[14]}]\
+           [get_ports {HRDATA[15]}]\
+           [get_ports {HRDATA[16]}]\
+           [get_ports {HRDATA[17]}]\
+           [get_ports {HRDATA[18]}]\
+           [get_ports {HRDATA[19]}]\
+           [get_ports {HRDATA[1]}]\
+           [get_ports {HRDATA[20]}]\
+           [get_ports {HRDATA[21]}]\
+           [get_ports {HRDATA[22]}]\
+           [get_ports {HRDATA[23]}]\
+           [get_ports {HRDATA[24]}]\
+           [get_ports {HRDATA[25]}]\
+           [get_ports {HRDATA[26]}]\
+           [get_ports {HRDATA[27]}]\
+           [get_ports {HRDATA[28]}]\
+           [get_ports {HRDATA[29]}]\
+           [get_ports {HRDATA[2]}]\
+           [get_ports {HRDATA[30]}]\
+           [get_ports {HRDATA[31]}]\
+           [get_ports {HRDATA[3]}]\
+           [get_ports {HRDATA[4]}]\
+           [get_ports {HRDATA[5]}]\
+           [get_ports {HRDATA[6]}]\
+           [get_ports {HRDATA[7]}]\
+           [get_ports {HRDATA[8]}]\
+           [get_ports {HRDATA[9]}]] 1
+set_multicycle_path -setup\
+    -through [list [get_ports {HADDR[0]}]\
+           [get_ports {HADDR[10]}]\
+           [get_ports {HADDR[11]}]\
+           [get_ports {HADDR[12]}]\
+           [get_ports {HADDR[13]}]\
+           [get_ports {HADDR[14]}]\
+           [get_ports {HADDR[15]}]\
+           [get_ports {HADDR[16]}]\
+           [get_ports {HADDR[17]}]\
+           [get_ports {HADDR[18]}]\
+           [get_ports {HADDR[19]}]\
+           [get_ports {HADDR[1]}]\
+           [get_ports {HADDR[20]}]\
+           [get_ports {HADDR[21]}]\
+           [get_ports {HADDR[22]}]\
+           [get_ports {HADDR[23]}]\
+           [get_ports {HADDR[24]}]\
+           [get_ports {HADDR[25]}]\
+           [get_ports {HADDR[26]}]\
+           [get_ports {HADDR[27]}]\
+           [get_ports {HADDR[28]}]\
+           [get_ports {HADDR[29]}]\
+           [get_ports {HADDR[2]}]\
+           [get_ports {HADDR[30]}]\
+           [get_ports {HADDR[31]}]\
+           [get_ports {HADDR[3]}]\
+           [get_ports {HADDR[4]}]\
+           [get_ports {HADDR[5]}]\
+           [get_ports {HADDR[6]}]\
+           [get_ports {HADDR[7]}]\
+           [get_ports {HADDR[8]}]\
+           [get_ports {HADDR[9]}]]\
+    -through [list [get_ports {HRDATA[0]}]\
+           [get_ports {HRDATA[10]}]\
+           [get_ports {HRDATA[11]}]\
+           [get_ports {HRDATA[12]}]\
+           [get_ports {HRDATA[13]}]\
+           [get_ports {HRDATA[14]}]\
+           [get_ports {HRDATA[15]}]\
+           [get_ports {HRDATA[16]}]\
+           [get_ports {HRDATA[17]}]\
+           [get_ports {HRDATA[18]}]\
+           [get_ports {HRDATA[19]}]\
+           [get_ports {HRDATA[1]}]\
+           [get_ports {HRDATA[20]}]\
+           [get_ports {HRDATA[21]}]\
+           [get_ports {HRDATA[22]}]\
+           [get_ports {HRDATA[23]}]\
+           [get_ports {HRDATA[24]}]\
+           [get_ports {HRDATA[25]}]\
+           [get_ports {HRDATA[26]}]\
+           [get_ports {HRDATA[27]}]\
+           [get_ports {HRDATA[28]}]\
+           [get_ports {HRDATA[29]}]\
+           [get_ports {HRDATA[2]}]\
+           [get_ports {HRDATA[30]}]\
+           [get_ports {HRDATA[31]}]\
+           [get_ports {HRDATA[3]}]\
+           [get_ports {HRDATA[4]}]\
+           [get_ports {HRDATA[5]}]\
+           [get_ports {HRDATA[6]}]\
+           [get_ports {HRDATA[7]}]\
+           [get_ports {HRDATA[8]}]\
+           [get_ports {HRDATA[9]}]] 2
 ###############################################################################
 # Environment
 ###############################################################################
@@ -540,9 +670,12 @@ set_input_transition -min 0.0400 [get_ports {HADDR[1]}]
 set_input_transition -max 0.6700 [get_ports {HADDR[1]}]
 set_input_transition -min 0.0400 [get_ports {HADDR[0]}]
 set_input_transition -max 0.6700 [get_ports {HADDR[0]}]
-set_input_transition 0.1200 [get_ports {HSIZE[2]}]
-set_input_transition 0.1200 [get_ports {HSIZE[1]}]
-set_input_transition 0.1200 [get_ports {HSIZE[0]}]
+set_input_transition -min 0.1200 [get_ports {HSIZE[2]}]
+set_input_transition -max 0.2400 [get_ports {HSIZE[2]}]
+set_input_transition -min 0.1200 [get_ports {HSIZE[1]}]
+set_input_transition -max 0.2400 [get_ports {HSIZE[1]}]
+set_input_transition -min 0.1200 [get_ports {HSIZE[0]}]
+set_input_transition -max 0.2400 [get_ports {HSIZE[0]}]
 set_input_transition 0.3200 [get_ports {HTRANS[1]}]
 set_input_transition 0.3200 [get_ports {HTRANS[0]}]
 set_input_transition -min 0.0400 [get_ports {HWDATA[31]}]
@@ -641,38 +774,22 @@ set_input_transition 0.1400 [get_ports {gpio2_in[3]}]
 set_input_transition 0.1400 [get_ports {gpio2_in[2]}]
 set_input_transition 0.1400 [get_ports {gpio2_in[1]}]
 set_input_transition 0.1400 [get_ports {gpio2_in[0]}]
-set_input_transition -min 0.0600 [get_ports {gpio3_in[7]}]
-set_input_transition -max 0.1000 [get_ports {gpio3_in[7]}]
-set_input_transition -min 0.0600 [get_ports {gpio3_in[6]}]
-set_input_transition -max 0.1000 [get_ports {gpio3_in[6]}]
-set_input_transition -min 0.0600 [get_ports {gpio3_in[5]}]
-set_input_transition -max 0.1000 [get_ports {gpio3_in[5]}]
-set_input_transition -min 0.0600 [get_ports {gpio3_in[4]}]
-set_input_transition -max 0.1000 [get_ports {gpio3_in[4]}]
-set_input_transition -min 0.0600 [get_ports {gpio3_in[3]}]
-set_input_transition -max 0.1000 [get_ports {gpio3_in[3]}]
-set_input_transition -min 0.0600 [get_ports {gpio3_in[2]}]
-set_input_transition -max 0.1000 [get_ports {gpio3_in[2]}]
-set_input_transition -min 0.0600 [get_ports {gpio3_in[1]}]
-set_input_transition -max 0.1000 [get_ports {gpio3_in[1]}]
-set_input_transition -min 0.0600 [get_ports {gpio3_in[0]}]
-set_input_transition -max 0.1000 [get_ports {gpio3_in[0]}]
-set_input_transition -min 0.0900 [get_ports {gpio4_in[7]}]
-set_input_transition -max 0.1000 [get_ports {gpio4_in[7]}]
-set_input_transition -min 0.0900 [get_ports {gpio4_in[6]}]
-set_input_transition -max 0.1000 [get_ports {gpio4_in[6]}]
-set_input_transition -min 0.0900 [get_ports {gpio4_in[5]}]
-set_input_transition -max 0.1000 [get_ports {gpio4_in[5]}]
-set_input_transition -min 0.0900 [get_ports {gpio4_in[4]}]
-set_input_transition -max 0.1000 [get_ports {gpio4_in[4]}]
-set_input_transition -min 0.0900 [get_ports {gpio4_in[3]}]
-set_input_transition -max 0.1000 [get_ports {gpio4_in[3]}]
-set_input_transition -min 0.0900 [get_ports {gpio4_in[2]}]
-set_input_transition -max 0.1000 [get_ports {gpio4_in[2]}]
-set_input_transition -min 0.0900 [get_ports {gpio4_in[1]}]
-set_input_transition -max 0.1000 [get_ports {gpio4_in[1]}]
-set_input_transition -min 0.0900 [get_ports {gpio4_in[0]}]
-set_input_transition -max 0.1000 [get_ports {gpio4_in[0]}]
+set_input_transition 0.1000 [get_ports {gpio3_in[7]}]
+set_input_transition 0.1000 [get_ports {gpio3_in[6]}]
+set_input_transition 0.1000 [get_ports {gpio3_in[5]}]
+set_input_transition 0.1000 [get_ports {gpio3_in[4]}]
+set_input_transition 0.1000 [get_ports {gpio3_in[3]}]
+set_input_transition 0.1000 [get_ports {gpio3_in[2]}]
+set_input_transition 0.1000 [get_ports {gpio3_in[1]}]
+set_input_transition 0.1000 [get_ports {gpio3_in[0]}]
+set_input_transition 0.1500 [get_ports {gpio4_in[7]}]
+set_input_transition 0.1500 [get_ports {gpio4_in[6]}]
+set_input_transition 0.1500 [get_ports {gpio4_in[5]}]
+set_input_transition 0.1500 [get_ports {gpio4_in[4]}]
+set_input_transition 0.1500 [get_ports {gpio4_in[3]}]
+set_input_transition 0.1500 [get_ports {gpio4_in[2]}]
+set_input_transition 0.1500 [get_ports {gpio4_in[1]}]
+set_input_transition 0.1500 [get_ports {gpio4_in[0]}]
 set_input_transition 0.1400 [get_ports {gpio5_in[7]}]
 set_input_transition 0.1400 [get_ports {gpio5_in[6]}]
 set_input_transition 0.1400 [get_ports {gpio5_in[5]}]
@@ -715,6 +832,8 @@ set_input_transition -min 0.0300 [get_ports {gpio7_in[0]}]
 set_input_transition -max 0.0900 [get_ports {gpio7_in[0]}]
 set_input_transition 0.1700 [get_ports {sio_in[1]}]
 set_input_transition 0.1700 [get_ports {sio_in[0]}]
+set_case_analysis 1 [get_ports {HSEL}]
+set_case_analysis 0 [get_ports {HTRANS[0]}]
 ###############################################################################
 # Design Rules
 ###############################################################################

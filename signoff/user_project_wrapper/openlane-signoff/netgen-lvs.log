@@ -87,8 +87,8 @@ No property perim found for device sky130_fd_pr__special_pfet_01v8_hvt
 No property topography found for device sky130_fd_pr__special_pfet_01v8_hvt
 No property value found for device sky130_fd_pr__diode_pw2nd_05v5
 No property mult found for device sky130_fd_pr__diode_pw2nd_05v5
-Comparison output logged to file /home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/25_02_25_10_39/61-netgen-lvs/reports/lvs.netgen.rpt
-Logging to file "/home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/25_02_25_10_39/61-netgen-lvs/reports/lvs.netgen.rpt" enabled
+Comparison output logged to file /home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/25_02_28_16_03/61-netgen-lvs/reports/lvs.netgen.rpt
+Logging to file "/home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/25_02_28_16_03/61-netgen-lvs/reports/lvs.netgen.rpt" enabled
 
 Contents of circuit 1:  Circuit: 'ahb_counter'
 Circuit ahb_counter contains 0 device instances.
@@ -115,5 +115,5 @@ Circuit 1 contains 141 nets,    Circuit 2 contains 141 nets.
 Final result: 
 Circuits match uniquely.
 .
-Logging to file "/home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/25_02_25_10_39/61-netgen-lvs/reports/lvs.netgen.rpt" disabled
+Logging to file "/home/passant/efabless/frigate-upw-example/openlane/user_project_wrapper/runs/25_02_28_16_03/61-netgen-lvs/reports/lvs.netgen.rpt" disabled
 LVS Done.

@@ -248,7 +248,8 @@ MACRO user_project_wrapper
   PIN HADDR[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.126000 ;
+    ANTENNAGATEAREA 0.560700 ;
+    ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met2 ;
         RECT 305.030 -2.000 305.310 4.000 ;
@@ -603,7 +604,7 @@ MACRO user_project_wrapper
   PIN HSEL
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.196500 ;
+    ANTENNAGATEAREA 0.126000 ;
     PORT
       LAYER met2 ;
         RECT 250.290 -2.000 250.570 4.000 ;
@@ -644,8 +645,7 @@ MACRO user_project_wrapper
   PIN HTRANS[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.560700 ;
-    ANTENNADIFFAREA 0.434700 ;
+    ANTENNAGATEAREA 0.126000 ;
     PORT
       LAYER met2 ;
         RECT 782.050 -2.000 782.330 4.000 ;
@@ -672,8 +672,7 @@ MACRO user_project_wrapper
   PIN HWDATA[11]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.560700 ;
-    ANTENNADIFFAREA 0.434700 ;
+    ANTENNAGATEAREA 0.126000 ;
     PORT
       LAYER met2 ;
         RECT 594.370 -2.000 594.650 4.000 ;
@@ -840,8 +839,7 @@ MACRO user_project_wrapper
   PIN HWDATA[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.560700 ;
-    ANTENNADIFFAREA 0.434700 ;
+    ANTENNAGATEAREA 0.126000 ;
     PORT
       LAYER met2 ;
         RECT 523.990 -2.000 524.270 4.000 ;
@@ -915,7 +913,8 @@ MACRO user_project_wrapper
   PIN HWDATA[8]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.126000 ;
+    ANTENNAGATEAREA 0.560700 ;
+    ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met2 ;
         RECT 570.910 -2.000 571.190 4.000 ;
@@ -924,8 +923,7 @@ MACRO user_project_wrapper
   PIN HWDATA[9]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.560700 ;
-    ANTENNADIFFAREA 0.434700 ;
+    ANTENNAGATEAREA 0.126000 ;
     PORT
       LAYER met2 ;
         RECT 578.730 -2.000 579.010 4.000 ;
@@ -2973,7 +2971,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 473.570 -21.620 476.670 94.535 ;
+        RECT 473.570 -21.620 476.670 99.940 ;
     END
     PORT
       LAYER met4 ;
@@ -2981,7 +2979,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 563.570 -21.620 566.670 94.535 ;
+        RECT 563.570 -21.620 566.670 89.775 ;
     END
     PORT
       LAYER met4 ;
@@ -2989,7 +2987,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 653.570 -21.620 656.670 94.535 ;
+        RECT 653.570 -21.620 656.670 89.775 ;
     END
     PORT
       LAYER met4 ;
@@ -2997,11 +2995,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 743.570 -21.620 746.670 94.535 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 743.570 293.145 746.670 2320.020 ;
+        RECT 743.570 -21.620 746.670 2320.020 ;
     END
     PORT
       LAYER met4 ;
@@ -3093,7 +3087,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met5 ;
-        RECT -22.380 114.330 461.980 117.430 ;
+        RECT -22.380 114.330 508.900 117.430 ;
     END
     PORT
       LAYER met5 ;
@@ -3193,7 +3187,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met5 ;
-        RECT 832.700 114.330 2742.360 117.430 ;
+        RECT 669.860 114.330 2742.360 117.430 ;
     END
   END vccd1
   PIN vccd2
@@ -3237,7 +3231,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 510.770 -21.620 513.870 94.535 ;
+        RECT 510.770 -21.620 513.870 89.775 ;
     END
     PORT
       LAYER met4 ;
@@ -3245,7 +3239,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 600.770 -21.620 603.870 94.535 ;
+        RECT 600.770 -21.620 603.870 89.775 ;
     END
     PORT
       LAYER met4 ;
@@ -3253,15 +3247,11 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 690.770 -21.620 693.870 94.535 ;
+        RECT 690.770 -21.620 693.870 2320.020 ;
     END
     PORT
       LAYER met4 ;
-        RECT 690.770 293.145 693.870 2320.020 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 780.770 -21.620 783.870 94.535 ;
+        RECT 780.770 -21.620 783.870 99.940 ;
     END
     PORT
       LAYER met4 ;
@@ -3357,7 +3347,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met5 ;
-        RECT -22.380 151.530 461.980 154.630 ;
+        RECT -22.380 151.530 508.900 154.630 ;
     END
     PORT
       LAYER met5 ;
@@ -3453,7 +3443,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met5 ;
-        RECT 832.700 151.530 2742.360 154.630 ;
+        RECT 669.860 151.530 2742.360 154.630 ;
     END
   END vccd2
   PIN vdda1
@@ -3641,7 +3631,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 492.170 -21.620 495.270 94.535 ;
+        RECT 492.170 -21.620 495.270 89.775 ;
     END
     PORT
       LAYER met4 ;
@@ -3649,7 +3639,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 582.170 -21.620 585.270 94.535 ;
+        RECT 582.170 -21.620 585.270 89.775 ;
     END
     PORT
       LAYER met4 ;
@@ -3657,19 +3647,11 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 672.170 -21.620 675.270 94.535 ;
+        RECT 672.170 -21.620 675.270 2320.020 ;
     END
     PORT
       LAYER met4 ;
-        RECT 672.170 293.145 675.270 2320.020 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 762.170 -21.620 765.270 94.535 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 762.170 293.145 765.270 2320.020 ;
+        RECT 762.170 -21.620 765.270 2320.020 ;
     END
     PORT
       LAYER met4 ;
@@ -3761,7 +3743,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met5 ;
-        RECT -22.380 132.930 461.980 136.030 ;
+        RECT -22.380 132.930 508.900 136.030 ;
     END
     PORT
       LAYER met5 ;
@@ -3857,7 +3839,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met5 ;
-        RECT 832.700 132.930 2742.360 136.030 ;
+        RECT 669.860 132.930 2742.360 136.030 ;
     END
   END vssd1
   PIN vssd2
@@ -3901,7 +3883,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 529.370 -21.620 532.470 94.535 ;
+        RECT 529.370 -21.620 532.470 89.775 ;
     END
     PORT
       LAYER met4 ;
@@ -3909,7 +3891,7 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 619.370 -21.620 622.470 94.535 ;
+        RECT 619.370 -21.620 622.470 89.775 ;
     END
     PORT
       LAYER met4 ;
@@ -3917,19 +3899,11 @@ MACRO user_project_wrapper
     END
     PORT
       LAYER met4 ;
-        RECT 709.370 -21.620 712.470 94.535 ;
+        RECT 709.370 -21.620 712.470 2320.020 ;
     END
     PORT
       LAYER met4 ;
-        RECT 709.370 293.145 712.470 2320.020 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 799.370 -21.620 802.470 94.535 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 799.370 293.145 802.470 2320.020 ;
+        RECT 799.370 -21.620 802.470 2320.020 ;
     END
     PORT
       LAYER met4 ;
@@ -4438,50 +4412,45 @@ MACRO user_project_wrapper
         RECT 604.270 292.745 618.970 1402.665 ;
         RECT 622.870 292.745 653.170 1402.665 ;
         RECT 657.070 292.745 671.770 1402.665 ;
-        RECT 675.670 292.745 690.370 1402.665 ;
-        RECT 694.270 292.745 708.970 1402.665 ;
-        RECT 712.870 292.745 743.170 1402.665 ;
-        RECT 747.070 292.745 761.770 1402.665 ;
+        RECT 442.870 100.340 671.770 292.745 ;
+        RECT 442.870 1.110 473.170 100.340 ;
+        RECT 477.070 90.175 671.770 100.340 ;
+        RECT 477.070 1.110 491.770 90.175 ;
+        RECT 495.670 1.110 510.370 90.175 ;
+        RECT 514.270 1.110 528.970 90.175 ;
+        RECT 532.870 1.110 563.170 90.175 ;
+        RECT 567.070 1.110 581.770 90.175 ;
+        RECT 585.670 1.110 600.370 90.175 ;
+        RECT 604.270 1.110 618.970 90.175 ;
+        RECT 622.870 1.110 653.170 90.175 ;
+        RECT 657.070 1.110 671.770 90.175 ;
+        RECT 675.670 1.110 690.370 1402.665 ;
+        RECT 694.270 1.110 708.970 1402.665 ;
+        RECT 712.870 1.110 743.170 1402.665 ;
+        RECT 747.070 1.110 761.770 1402.665 ;
         RECT 765.670 298.220 780.370 1402.665 ;
-        RECT 784.270 298.220 798.970 1402.665 ;
-        RECT 765.670 292.745 798.970 298.220 ;
-        RECT 802.870 292.745 820.890 1402.665 ;
-        RECT 442.870 94.935 820.890 292.745 ;
-        RECT 442.870 1.110 473.170 94.935 ;
-        RECT 477.070 1.110 491.770 94.935 ;
-        RECT 495.670 1.110 510.370 94.935 ;
-        RECT 514.270 1.110 528.970 94.935 ;
-        RECT 532.870 1.110 563.170 94.935 ;
-        RECT 567.070 1.110 581.770 94.935 ;
-        RECT 585.670 1.110 600.370 94.935 ;
-        RECT 604.270 1.110 618.970 94.935 ;
-        RECT 622.870 1.110 653.170 94.935 ;
-        RECT 657.070 1.110 671.770 94.935 ;
-        RECT 675.670 1.110 690.370 94.935 ;
-        RECT 694.270 1.110 708.970 94.935 ;
-        RECT 712.870 1.110 743.170 94.935 ;
-        RECT 747.070 1.110 761.770 94.935 ;
-        RECT 765.670 1.110 780.370 94.935 ;
-        RECT 784.270 1.110 798.970 94.935 ;
-        RECT 802.870 1.110 820.890 94.935 ;
+        RECT 784.270 298.220 787.740 1402.665 ;
+        RECT 765.670 100.340 787.740 298.220 ;
+        RECT 765.670 1.110 780.370 100.340 ;
+        RECT 784.270 1.110 787.740 100.340 ;
       LAYER met5 ;
-        RECT 0.580 299.030 821.100 301.700 ;
-        RECT 0.580 264.830 821.100 292.730 ;
-        RECT 0.580 246.230 821.100 258.530 ;
-        RECT 0.580 227.630 821.100 239.930 ;
-        RECT 0.580 209.030 821.100 221.330 ;
-        RECT 0.580 174.830 821.100 202.730 ;
-        RECT 0.580 156.230 821.100 168.530 ;
-        RECT 463.580 149.930 821.100 156.230 ;
-        RECT 0.580 137.630 821.100 149.930 ;
-        RECT 463.580 131.330 821.100 137.630 ;
-        RECT 0.580 119.030 821.100 131.330 ;
-        RECT 463.580 112.730 821.100 119.030 ;
-        RECT 0.580 84.830 821.100 112.730 ;
-        RECT 0.580 66.230 821.100 78.530 ;
-        RECT 0.580 47.630 821.100 59.930 ;
-        RECT 0.580 29.030 821.100 41.330 ;
-        RECT 0.580 0.900 821.100 22.730 ;
+        RECT 0.580 299.030 760.260 301.700 ;
+        RECT 0.580 264.830 760.260 292.730 ;
+        RECT 0.580 246.230 760.260 258.530 ;
+        RECT 0.580 227.630 760.260 239.930 ;
+        RECT 0.580 209.030 760.260 221.330 ;
+        RECT 0.580 174.830 760.260 202.730 ;
+        RECT 0.580 156.230 760.260 168.530 ;
+        RECT 510.500 149.930 668.260 156.230 ;
+        RECT 0.580 137.630 760.260 149.930 ;
+        RECT 510.500 131.330 668.260 137.630 ;
+        RECT 0.580 119.030 760.260 131.330 ;
+        RECT 510.500 112.730 668.260 119.030 ;
+        RECT 0.580 84.830 760.260 112.730 ;
+        RECT 0.580 66.230 760.260 78.530 ;
+        RECT 0.580 47.630 760.260 59.930 ;
+        RECT 0.580 29.030 760.260 41.330 ;
+        RECT 0.580 0.900 760.260 22.730 ;
   END
 END user_project_wrapper
 END LIBRARY

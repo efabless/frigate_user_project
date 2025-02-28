@@ -6,7 +6,7 @@ VERILOG_FILES:
     - dir::../../verilog/rtl/ahb_counter.v
 PNR_SDC_FILE: dir::base.sdc
 SIGNOFF_SDC_FILE: dir::signoff.sdc
-DESIGN_REPAIR_MAX_WIRE_LENGTH: 800
+DESIGN_REPAIR_MAX_WIRE_LENGTH: 700
 RUN_POST_GRT_DESIGN_REPAIR: true
 FP_SIZING: absolute
 DIE_AREA: [0, 0, 400, 200]

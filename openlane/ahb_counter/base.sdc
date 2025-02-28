@@ -40,12 +40,20 @@ set_timing_derate -early [expr {1-$::env(TIME_DERATING_CONSTRAINT)/100}]
 set_timing_derate -late [expr {1+$::env(TIME_DERATING_CONSTRAINT)/100}]
 puts "\[INFO\]: Setting timing derate to: $::env(TIME_DERATING_CONSTRAINT) %"
 
+# Multicycle paths
+set_multicycle_path -setup 2 -through [get_ports {HADDR*}] -through [get_ports {HRDATA*}]
+set_multicycle_path -hold 1  -through [get_ports {HADDR*}] -through [get_ports {HRDATA*}]
+
+# Constant Ports
+set_case_analysis 1 [get_ports {HSEL}]
+set_case_analysis 0 [get_ports {HTRANS[0]}]
+
 #------------------------------------------#
 # Retrieved Constraints
 #------------------------------------------#
 
 # Clock source latency
-set clk_max_latency 4.85
+set clk_max_latency 5.05
 set clk_min_latency 2.22
 set_clock_latency -source -max $clk_max_latency [get_clocks {clk}]
 set_clock_latency -source -min $clk_min_latency [get_clocks {clk}]
@@ -57,14 +65,14 @@ set_input_transition $clk_tran [get_ports $clk_input]
 puts "\[INFO\]: Setting clock transition: $clk_tran"
 
 # Input delays
-set_input_delay -max 10.38  -clock [get_clocks {clk}] [get_ports {HTRANS[*]}]
-set_input_delay -max 10.97  -clock [get_clocks {clk}] [get_ports {HWRITE}]
-set_input_delay -max 11.76  -clock [get_clocks {clk}] [get_ports {HSIZE[*]}]
-set_input_delay -max 12.12  -clock [get_clocks {clk}] [get_ports {HADDR[*]}]
 set_input_delay -max 4.01   -clock [get_clocks {clk}] [get_ports {HRESETn}]
 set_input_delay -max 4.58   -clock [get_clocks {clk}] [get_ports {HREADY}]
 set_input_delay -max 6.11   -clock [get_clocks {clk}] [get_ports {HWDATA[*]}]
-set_input_delay -min 0.63   -clock [get_clocks {clk}] [get_ports {HWRITE}]
+set_input_delay -max 7.24   -clock [get_clocks {clk}] [get_ports {HTRANS[*]}]
+set_input_delay -max 8.06   -clock [get_clocks {clk}] [get_ports {HWRITE}]
+set_input_delay -max 8.75   -clock [get_clocks {clk}] [get_ports {HSIZE[*]}]
+set_input_delay -max 9.81   -clock [get_clocks {clk}] [get_ports {HADDR[*]}]
+set_input_delay -min 0.64   -clock [get_clocks {clk}] [get_ports {HWRITE}]
 set_input_delay -min 0.7    -clock [get_clocks {clk}] [get_ports {HADDR[*]}]
 set_input_delay -min 0.83   -clock [get_clocks {clk}] [get_ports {HSIZE[*]}]
 set_input_delay -min 0.87   -clock [get_clocks {clk}] [get_ports {HTRANS[*]}]
@@ -73,8 +81,8 @@ set_input_delay -min 1.18   -clock [get_clocks {clk}] [get_ports {HREADY}]
 set_input_delay -min 2.33   -clock [get_clocks {clk}] [get_ports {HRESETn}]
 
 # Input Transition
-set_input_transition -max 0.12 [get_ports {HSIZE[*]}]
 set_input_transition -max 0.13 [get_ports {HREADY}]
+set_input_transition -max 0.24 [get_ports {HSIZE[*]}]
 set_input_transition -max 0.26 [get_ports {HWRITE}]
 set_input_transition -max 0.32 [get_ports {HTRANS[*]}]
 set_input_transition -max 0.49 [get_ports {HWDATA[*]}]
@@ -89,8 +97,8 @@ set_input_transition -min 0.28 [get_ports {HREADY}]
 set_input_transition -min 0.32 [get_ports {HTRANS[*]}]
 
 # Output delays
-set_output_delay -max 7.54   -clock [get_clocks {clk}] [get_ports {HRDATA[*]}]
-set_output_delay -max 9.8    -clock [get_clocks {clk}] [get_ports {HREADYOUT}]
+set_output_delay -max 5.77   -clock [get_clocks {clk}] [get_ports {HRDATA[*]}]
+set_output_delay -max 8.14   -clock [get_clocks {clk}] [get_ports {HREADYOUT}]
 set_output_delay -min 0.01   -clock [get_clocks {clk}] [get_ports {HRDATA[*]}]
 set_output_delay -min 0.83   -clock [get_clocks {clk}] [get_ports {HREADYOUT}]
 

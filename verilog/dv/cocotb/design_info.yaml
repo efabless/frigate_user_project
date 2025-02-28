@@ -1,8 +1,8 @@
-FRIGATE_ROOT: /home/rady/work/temp/frigate-upw-example/dependencies/frigate
-MCW_ROOT: /home/rady/work/temp/frigate-upw-example/dependencies/frigate/dependencies/caravel_mgmt_soc
+FRIGATE_ROOT: /home/passant/efabless/frigate-upw-example/dependencies/frigate
+MCW_ROOT: /home/passant/efabless/frigate-upw-example/dependencies/frigate/dependencies/caravel_mgmt_soc
 PDK: sky130A
-PDK_ROOT: /home/rady/caravel/files4vcs/pdk
-USER_PROJECT_ROOT: /home/rady/work/temp/frigate-upw-example
+PDK_ROOT: /home/passant/efabless/frigate-upw-example/dependencies/pdks
+USER_PROJECT_ROOT: /home/passant/efabless/frigate-upw-example
 caravan: false
 clk: 20
 emailto:
